@@ -34,7 +34,7 @@ Note:
 * Scala shell intepreter do eksploracji danych
 * Nie Jython ani Groovy, bo Scala jest statycznie typowana, więc można zastosować więcej sztuczek wydajnośiowych
 * W scali można wygodnie serializować funkcje i przesyłać je siecią
-* Kiedy Spark powstawał (2009) Scala miała już 5 lat
+* Kiedy Spark powstawał (2009) Scala miała już 5 lat, Matei Zaharia
 
 ---
 
