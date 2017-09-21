@@ -36,6 +36,18 @@ Note:
 * W scali można wygodnie serializować funkcje i przesyłać je siecią
 * Kiedy Spark powstawał (2009) Scala miała już 5 lat, Matei Zaharia
 
++++
+
+JVM i praca z danymi, OLTP vs OLAP
+
+---
+
+## Projekt Tungsten
+
+---
+
+![PWN](assets/images/tungsten.png)
+
 ---
 
 ### cośtam cośtam
