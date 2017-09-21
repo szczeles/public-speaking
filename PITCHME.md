@@ -46,7 +46,7 @@ JVM i praca z danymi, OLTP vs OLAP
 
 ---
 
-![PWN](assets/images/tungsten.png)
+![PWN](assets/images/pwn_tungsten.png)
 
 ---
 
