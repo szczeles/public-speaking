@@ -1,4 +1,4 @@
-## Apache Spark, czyli jak wycisnąć z JVMa więcej niż fabryka dała
+## ![Spark logo](assets/spark_logo.png), czyli jak wycisnąć z JVMa więcej niż fabryka dała
 
 ---
 
