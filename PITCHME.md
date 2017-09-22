@@ -208,6 +208,11 @@ df.where(df.conference == "jdd2017").count()
 /* 080 */   }
 ```
 
+@[17-21](filtrowanie)
+@[32-35](zliczanie)
+
+---
+
 ![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
 
 [Janino](http://janino-compiler.github.io/janino/)
