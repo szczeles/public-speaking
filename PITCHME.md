@@ -48,8 +48,9 @@ TODO: dodać jako listę
 
 +++
 
-## Ile w JVM zajmuje napis `jdd2017`?
+## Ile pamięci zajmują napisy?
 
+ -  `jdd2017`
  - 7 bajtów?  |
  - 14 bajtów? |
  - 56 bajtów! |
@@ -201,7 +202,7 @@ Przechowywanie danych w kolumnach, nie wierszowo.
 
 +++
 
-## WSCG
+## Przykład
 
 ```
 df.where(df.conference == "jdd2017").count()
