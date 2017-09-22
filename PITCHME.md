@@ -172,7 +172,7 @@ df.where(df.conference == "jdd2017").count()
 
 +++
 
-```
+```java
 /* 044 */   private void agg_doAggregateWithoutKey() throws java.io.IOException {
 /* 045 */     // initialize aggregation buffer
 /* 046 */     agg_bufIsNull = false;
