@@ -54,6 +54,9 @@ TODO: dodać jako listę
  - 14 bajtów? |
  - 56 bajtów! |
 
+Note:
+* compressed OOPS
+
 +++
 
 ```
@@ -69,13 +72,12 @@ TODO: dodać jako listę
 
 
 Note:
-* compressed OOPS
 * object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
 * w javie 9 - 48 bajtów
 
 +++
 
-JIT nie zawsze inline'uje metody
+## JIT nie zawsze inline'uje metody
 
 Note:
 
@@ -85,7 +87,9 @@ Note:
 
 ## Projekt Tungsten
 
----
++++?image=http://periodictable.com/Samples/074.68/s12s.JPG
+
++++
 
 ![PWN](assets/images/pwn_tungsten.png)
 
