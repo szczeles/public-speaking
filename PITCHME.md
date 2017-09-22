@@ -53,14 +53,12 @@ TODO: dodać jako listę
  - 7 bajtów?  |
  - 14 bajtów? |
  - 56 bajtów! |
-
-
-```
-12 | header 
- 4 | char[] reference -------> 12 | header
- 4 | String.hash               14 | char[] (UTF-16)
- 4 | String.hash32              6 | padding
-```
+	```
+	12 | header 
+	 4 | char[] reference -------> 12 | header
+	 4 | String.hash               14 | char[] (UTF-16)
+	 4 | String.hash32              6 | padding
+	```
 
  - [JEP-254](http://openjdk.java.net/jeps/254) na ratunek! |
 
