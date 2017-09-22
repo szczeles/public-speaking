@@ -87,7 +87,7 @@ Note:
 
 ## Projekt Tungsten
 
-+++?image=http://periodictable.com/Samples/074.68/s12s.JPG
++++?image=http://periodictable.com/Samples/074.68/s12s.JPG&size=auto
 
 +++
 
