@@ -120,7 +120,7 @@ Note:
 
 +++
 
-- Unsafe
+- sun.misc.Unsafe
 - pozbywanie się GC gdzie to tylko możliwe
 - ograniczenie ilości pamięci (oszczędności na kompresji)
 - złe praktyki dostępu do pamięci (String, HashMap)
@@ -166,6 +166,8 @@ Przechowywanie danych w kolumnach, nie wierszowo.
 df.where(df.conference == "jdd2017").count()
 ```
 
+![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
+
 ```
 /* 044 */   private void agg_doAggregateWithoutKey() throws java.io.IOException {
 /* 045 */     // initialize aggregation buffer
@@ -205,6 +207,13 @@ df.where(df.conference == "jdd2017").count()
 /* 079 */
 /* 080 */   }
 ```
+
+![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
+
+[Janino](http://janino-compiler.github.io/janino/)
+
+Note:
+janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 +++
 
