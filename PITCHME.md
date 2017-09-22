@@ -36,9 +36,46 @@ Note:
 * W scali można wygodnie serializować funkcje i przesyłać je siecią
 * Kiedy Spark powstawał (2009) Scala miała już 5 lat, Matei Zaharia
 
+TODO: dodać jako listę
+
+---
+
+## JVM utrudnia pracę z dużymi danymi!
+
 +++
 
-JVM i praca z danymi, OLTP vs OLAP
+## GC dobry dla OLTP, słaby w OLAP
+
++++
+
+## Ile w JVM zajmuje napis `jdd2017`?
+
+ * 7 bajtów?
+ * 14 bajtów?
+ * 56 bajtów!
+
+```
+12 | header 
+ 4 | char[] reference -------> 12 | header
+ 4 | String.hash               14 | char[] (UTF-16)
+ 4 | String.hash32              6 | padding
+```
+
+ * [JEP-254](http://openjdk.java.net/jeps/254), dostępny w Javie 9
+
+
+Note:
+* compressed OOPS
+* object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
+* w javie 9 - 48 bajtów
+
++++
+
+JIT nie zawsze inline'uje metody
+
+Note:
+
+* inline nie działa dla długich metod i poliformizmu
 
 ---
 
