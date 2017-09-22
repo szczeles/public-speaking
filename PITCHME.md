@@ -162,11 +162,15 @@ Przechowywanie danych w kolumnach, nie wierszowo.
 
 +++
 
+## WSCG
+
 ```
 df.where(df.conference == "jdd2017").count()
 ```
 
 ![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
+
++++
 
 ```
 /* 044 */   private void agg_doAggregateWithoutKey() throws java.io.IOException {
@@ -211,9 +215,9 @@ df.where(df.conference == "jdd2017").count()
 @[17-21](filtrowanie)
 @[32-35](zliczanie)
 
----
-
 ![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
+
+---
 
 [Janino](http://janino-compiler.github.io/janino/)
 
