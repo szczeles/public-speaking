@@ -11,7 +11,7 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 
 - Mariusz Strzelecki
 - ![DXC](http://assets1.dxc.technology/newsroom/images/dxc_logo_hz_blk_rgb_300.png)
-- stackoverflow, tagi `spark` i `pyspark`
+- stackoverflow, tagi **spark** i **pyspark**
 
 ---
 
