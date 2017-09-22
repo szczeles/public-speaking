@@ -50,9 +50,9 @@ TODO: dodać jako listę
 
 ## Ile w JVM zajmuje napis `jdd2017`?
 
- * 7 bajtów?
- * 14 bajtów? |
- * 56 bajtów! |
+ - 7 bajtów?  |
+ - 14 bajtów? |
+ - 56 bajtów! |
 
 
 ```
@@ -62,7 +62,7 @@ TODO: dodać jako listę
  4 | String.hash32              6 | padding
 ```
 
- * [JEP-254](http://openjdk.java.net/jeps/254) na ratunek! |
+ - [JEP-254](http://openjdk.java.net/jeps/254) na ratunek! |
 
 
 Note:
