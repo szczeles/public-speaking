@@ -212,43 +212,42 @@ df.where(df.conference == "jdd2017").count()
 +++
 
 ```java
-/* 044 */   private void agg_doAggregateWithoutKey() throws java.io.IOException {
-/* 045 */     // initialize aggregation buffer
-/* 046 */     agg_bufIsNull = false;
-/* 047 */     agg_bufValue = 0L;
-/* 048 */
-/* 049 */     while (inputadapter_input.hasNext()) {
-/* 050 */       InternalRow inputadapter_row = (InternalRow) inputadapter_input.next();
-/* 051 */       boolean inputadapter_isNull = inputadapter_row.isNullAt(0);
-/* 052 */       UTF8String inputadapter_value = inputadapter_isNull ? null : (inputadapter_row.getUTF8String(0));
-/* 053 */
-/* 054 */       if (!(!(inputadapter_isNull))) continue;
-/* 055 */
-/* 056 */       boolean filter_isNull2 = false;
-/* 057 */
-/* 058 */       Object filter_obj = ((Expression) references[1]).eval(null);
-/* 059 */       UTF8String filter_value4 = (UTF8String) filter_obj;
-/* 060 */       boolean filter_value2 = false;
-/* 061 */       filter_value2 = inputadapter_value.equals(filter_value4);
-/* 062 */       if (!filter_value2) continue;
-/* 063 */
-/* 064 */       filter_numOutputRows.add(1);
-/* 065 */
-/* 066 */       // do aggregate
-/* 067 */       // common sub-expressions
-/* 068 */
-/* 069 */       // evaluate aggregate function
-/* 070 */       boolean agg_isNull1 = false;
-/* 071 */
-/* 072 */       long agg_value1 = -1L;
-/* 073 */       agg_value1 = agg_bufValue + 1L;
-/* 074 */       // update aggregation buffer
-/* 075 */       agg_bufIsNull = false;
-/* 076 */       agg_bufValue = agg_value1;
-/* 077 */       if (shouldStop()) return;
-/* 078 */     }
-/* 079 */
-/* 080 */   }
+private void agg_doAggregateWithoutKey() throws java.io.IOException {
+  // initialize aggregation buffer
+  agg_bufIsNull = false;
+  agg_bufValue = 0L;
+
+  while (inputadapter_input.hasNext()) {
+    InternalRow inputadapter_row = (InternalRow) inputadapter_input.next();
+    boolean inputadapter_isNull = inputadapter_row.isNullAt(0);
+    UTF8String inputadapter_value = inputadapter_isNull ? null : (inputadapter_row.getUTF8String(0));
+
+    if (!(!(inputadapter_isNull))) continue;
+
+    boolean filter_isNull2 = false;
+
+    Object filter_obj = ((Expression) references[1]).eval(null);
+    UTF8String filter_value4 = (UTF8String) filter_obj;
+    boolean filter_value2 = false;
+    filter_value2 = inputadapter_value.equals(filter_value4);
+    if (!filter_value2) continue;
+
+    filter_numOutputRows.add(1);
+
+    // do aggregate
+    // common sub-expressions
+
+    // evaluate aggregate function
+    boolean agg_isNull1 = false;
+
+    long agg_value1 = -1L;
+    agg_value1 = agg_bufValue + 1L;
+    // update aggregation buffer
+    agg_bufIsNull = false;
+    agg_bufValue = agg_value1;
+    if (shouldStop()) return;
+  }
+}
 ```
 
 @[15-19](filtrowanie)
