@@ -82,6 +82,18 @@ Note:
 Note:
 
 * inline nie działa dla długich metod i poliformizmu
+* boxing wszystkich obiektów
+
++++
+
+## Ostatnie 7 lat sparka:
+
+
+|         | 2010          | 2017           |
+| ------- |:-------------:|:--------------:|
+| Dysk    | 50 MB/s (HDD) | 500 MB/s (SSD) |
+| Sieć    | 1 Gbps        | 10 Gbps        |
+| CPU     | ~3 Ghz        | ~3 Ghz         |
 
 ---
 
@@ -95,9 +107,10 @@ Note:
 
 ---
 
-### cośtam cośtam
+## Projekt Tungsten, faza 1
 
-- linia 1 
+- Unsafe
+- 
 - linia 2
 
 ---
