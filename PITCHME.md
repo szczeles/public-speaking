@@ -99,6 +99,7 @@ Note:
 - IO w sparku i tak zostało zoptymalizowane 
 - Pojawiły się kolumnowe formaty danych
 - CPU wciąż jest wąskim gardłem, taki jest też spodziewany trend
+- rola CPU w przetwarzaniu: serializacja, hashowanie, kompresja
 
 ---
 
@@ -124,6 +125,44 @@ Note:
 - pozbywanie się GC gdzie to tylko możliwe
 - ograniczenie ilości pamięci (oszczędności na kompresji)
 - złe praktyki dostępu do pamięci (String, HashMap)
+- 
+
++++
+
+## Nowe typy bazowe
+
+UTF8String -> Array[Byte]
+
++++
+
+## HashMap
+
+- overhead pamięcii -> klucze i wartości to obiekty
+- układ w pamięci nie pomaga CPU
+- trudność w przeszukiwaniu (full-scan)
+
+
+- BytesToBytesMap -> wydajne przeszukiwanie
+
++++
+
+## UnsafeRow
+
+- Wydajne zrzucanie danych na dysk (znamy dokładny rozmiar)
+- `equals()` i `hashCode()` są niepotrzebne, wystarczy porównać binarnie bloki danych
+- TaskMemoryManager do obsługi wirtualnej adresacji
+
++++
+
+## Sortowanie
+
+```
+ 4b          4b
+--------------------               ------
+|key-prefix|pointer| ------------> |data|
+--------------------               ------
+```
+
 
 ---
 
@@ -214,10 +253,6 @@ df.where(df.conference == "jdd2017").count()
 
 @[15-19](filtrowanie)
 @[30-33	](zliczanie)
-
----
-
-![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
 
 [Janino](http://janino-compiler.github.io/janino/)
 
