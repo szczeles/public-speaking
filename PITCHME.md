@@ -212,8 +212,8 @@ df.where(df.conference == "jdd2017").count()
 /* 080 */   }
 ```
 
-@[17-21](filtrowanie)
-@[32-35](zliczanie)
+@[15-19](filtrowanie)
+@[30-33](zliczanie)
 
 ![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
 
