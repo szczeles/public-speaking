@@ -10,12 +10,23 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 ## O mnie
 
 - Mariusz Strzelecki
+- Toruń JUG [Torun JUG](http://day.torun.jug.pl/wp-content/uploads/2017/03/jug5d_2.png)
 - ![DXC](http://assets1.dxc.technology/newsroom/images/dxc_logo_hz_blk_rgb_300.png)
 - stackoverflow, tagi **spark** i **pyspark**
 
 ---
 
 ![Spark logo](http://blog.scottlogic.com/bjedrzejewski/assets/apache-spark-logo.png)
+
++++
+
+Java w świecie Big Data to nienajlepszy wybór
+
+1. Boxing zmiennych - przykład z jdd2017
+2. Garbage collector na niemutowalnych danych
+3. Memory layouts
+ * Sortowanie -> słabe układy pamięci
+ * Serializacja - wymaga skakania po pamięci / w C to jest zrzucenie bajtów  na dysk
 
 +++
 
