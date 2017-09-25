@@ -10,7 +10,7 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 ## O mnie
 
 - Mariusz Strzelecki
-- Toruń JUG [Torun JUG](http://day.torun.jug.pl/wp-content/uploads/2017/03/jug5d_2.png)
+- Toruń JUG ![Torun JUG](http://day.torun.jug.pl/wp-content/uploads/2017/03/jug5d_2.png)
 - ![DXC](http://assets1.dxc.technology/newsroom/images/dxc_logo_hz_blk_rgb_300.png)
 - stackoverflow, tagi **spark** i **pyspark**
 
