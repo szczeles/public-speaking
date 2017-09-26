@@ -106,6 +106,7 @@ Note:
 
 ## Ostatnie 7 lat sparka:
 
+TODO - wyanimować
 
 |         | 2010          | 2015           |
 | ------- |:-------------:|:--------------:|
@@ -145,6 +146,9 @@ Note:
 +++
 
 ## UnsafeRow
+
+TODO - przerobić na obrazek, nie mieści się
+na obrazku też Array[Object]
 
 ```
 +-------------------------------------------------------+
@@ -187,16 +191,16 @@ Note:
 
 +++
 
-
-
-+++
-
+TODO
 
 - BytesToBytesMap -> wydajne przeszukiwanie
 
 
-+++
+---
 
+# Whole-stage code generation
+
++++
 
 ## JIT nie zawsze inline'uje metody
 
@@ -205,20 +209,8 @@ Note:
 * inline nie działa dla długich metod i poliformizmu
 * boxing wszystkich obiektów
 
-## Sortowanie
 
-```
- 4b          4b
---------------------               ------
-|key-prefix|pointer| ------------> |data|
---------------------               ------
-```
-
-
----
-
-## Projekt Tungsten, faza 2
-
++++
 
 
 - generowanie kodu
