@@ -94,7 +94,7 @@ Note:
 
 ---
 
-## Projekt Tungsten
+## 2015: Projekt Tungsten
 
 +++?image=http://periodictable.com/Samples/074.68/s12s.JPG&size=auto
 
@@ -107,11 +107,11 @@ Note:
 ## Ostatnie 7 lat sparka:
 
 
-|         | 2010          | 2017           |
+|         | 2010          | 2015           |
 | ------- |:-------------:|:--------------:|
 | Dysk    | 50 MB/s (HDD) | 500 MB/s (SSD) |
-| Sieć    | 1 Gbps        | 10 Gbps        |
-| CPU     | ~3 Ghz        | ~3 Ghz         |
+| Sieć    | 1 GBps        | 10 GBps        |
+| CPU     | ~3 GHz        | ~3 GHz         |
 
 Note:
 - IO w sparku i tak zostało zoptymalizowane 
@@ -121,55 +121,78 @@ Note:
 
 ---
 
-## Projekt Tungsten, faza 1
-
-- zarządzanie pamięcią
-- generowanie kodu
-- optymalizacja użycia cache CPU
+## Pamieć
 
 +++
 
-- sun.misc.Unsafe
-- pozbywanie się GC gdzie to tylko możliwe
-- ograniczenie ilości pamięci (oszczędności na kompresji)
-- złe praktyki dostępu do pamięci (String, HashMap)
-- 
+## UTF8String 
+
+byte[] + ilość elementów
+
+Note:
+- 50% oszczędności RAM
+- wady - w UDFach trzeba transformować na String i w drugą stronę	
 
 +++
 
-## Nowe typy bazowe
+## sun.misc.Unsafe
 
-UTF8String -> byte[] + ilość elementów
-
-wady - w UDFach trzeba transformować na String i w drugą stronę	
-
-+++
-
-## HashMap
-
-- overhead pamięcii -> klucze i wartości to obiekty
-- układ w pamięci nie pomaga CPU
-- trudność w przeszukiwaniu (full-scan)
-
-
-- BytesToBytesMap -> wydajne przeszukiwanie
+- niskopoziomowe zarządzanie, m.in. pamiecią
+- jawna alokacja/zwalnianie pamięci
+- implementacja mocno zależy od platformy!
 
 +++
 
 ## UnsafeRow
 
-- Wydajne zrzucanie danych na dysk (znamy dokładny rozmiar)
-- `equals()` i `hashCode()` są niepotrzebne, wystarczy porównać binarnie bloki danych
-- TaskMemoryManager do obsługi wirtualnej adresacji
-  * Off-heap -> bezpośrednio 64-bitowy adres
-  * On-heap -> mechanizm witualnego stronnicowania, 13-bitów na numer strony i 27 bitów na offset -> możliwość zaadresowania 1TB pamięci w 5bajtach
+```
++-------------------------------------------------------+
+| null bits | primitive values | variable-length values |
++-------------------------------------------------------+
+
+{
+	"konferencja: "jdd",                        +-------|
+	"miasto": "Kraków"            +----+--------|-------v--------------------+
+	"rok": 2017            -----> | 00 | 2017 | 4 | 6 | 3 | jdd | 6 | Kraków |	
+}                                 +----+------------|-------------^----------+
+                                                    +-------------|
+``` 
+
+- wydajne (pamięciowo) przechowywanie danych |
+- serializacja | 
+- trywialne `equals()` |
+- spilling |
 
 Note:
  * wydajne pamięciowo przechowwyanie danych
- * unikanie niepotrzebnych skoków po referencjach
- * prosta serializacja (zrzucenie bajtów) do sieci
+ * serializacja: unikanie niepotrzebnych skoków po referencjach
  * equals() to porównwanie bajtów
  * proste obliczanie rozmiaru danych (ułatwia spilling na dysk), wcześniej heurystyki i aproksymacje
+
++++?image=assets/images/spark_unsafe.png&size=auto
+
++++ 
+
+## TaskMemoryManager
+
+- obsługi wirtualnej adresacji stron
+  - Off-heap: `java.nio.DirectByteBuffer` z "podstawionym buforem"
+  - On-heap: jako `long[]`
+
+Note:
+- unikanie złych praktyk ze skakaniem po pamięci
+- pozbywanie się nadmiernego GC
+- w on-heap java może dowolnie przenosić strony, potrzebna tablica stron
+
++++
+
+
+
++++
+
+
+- BytesToBytesMap -> wydajne przeszukiwanie
+
 
 +++
 
@@ -194,6 +217,11 @@ Note:
 ---
 
 ## Projekt Tungsten, faza 2
+
+
+
+- generowanie kodu
+- optymalizacja użycia cache CPU
 
 - Volcano -> generowanie kodu
 - wektoryzacja
