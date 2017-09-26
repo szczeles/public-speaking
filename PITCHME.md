@@ -161,7 +161,7 @@ Note:
 
 - wydajne (pamięciowo) przechowywanie danych |
 - serializacja | 
-- trywialne `equals()` |
+- trywialne porównywanie |
 - spilling |
 
 Note:
