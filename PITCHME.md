@@ -137,6 +137,7 @@ Note:
 
 ## sun.misc.Unsafe
 
+Note:
 - niskopoziomowe zarządzanie, m.in. pamiecią
 - jawna alokacja/zwalnianie pamięci
 - implementacja mocno zależy od platformy!
@@ -151,11 +152,11 @@ Note:
 +-------------------------------------------------------+
 
 {
-	"konferencja: "jdd",                        +-------|
-	"miasto": "Kraków"            +----+--------|-------v--------------------+
-	"rok": 2017            -----> | 00 | 2017 | 4 | 6 | 3 | jdd | 6 | Kraków |	
-}                                 +----+------------|-------------^----------+
-                                                    +-------------|
+	"konferencja: "jdd",                +-------|
+	"miasto": "Kraków"    +----+--------|-------v--------------------+
+	"rok": 2017    -----> | 00 | 2017 | 4 | 6 | 3 | jdd | 6 | Kraków |	
+}                         +----+------------|-------------^----------+
+                                            +-------------|
 ``` 
 
 - wydajne (pamięciowo) przechowywanie danych |
