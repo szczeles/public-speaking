@@ -22,50 +22,43 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 
 +++
 
-Java w świecie Big Data to nienajlepszy wybór
+## Dlaczego Spark jest napisany w Scali?
 
-1. Boxing zmiennych - przykład z jdd2017
-2. Garbage collector na niemutowalnych danych
-3. Memory layouts
- * Sortowanie -> słabe układy pamięci
- * Serializacja - wymaga skakania po pamięci / w C to jest zrzucenie bajtów  na dysk
-
-+++
-
-Dlaczego Spark działa na JVM?
+* 2009: Scala świętuje 5. urodziny |
+* zwięzłe, przyjazne api |
+* interpreter |
+* statyczne typowanie |
+* serializacja funkcji |
 
 Note:
-Hadoop jest już w Javie - zgodność z całością ekosystemy
-
-+++
-
-Dlaczego Spark w Scali?
-
-Note:
-
+* Hadoop jest już w Javie - zgodność z całością ekosystemu
+* Matei Zaharia
 * Zwięzłe, przyjazne api, podobne do LINQ
 * Scala shell intepreter do eksploracji danych
 * Nie Jython ani Groovy, bo Scala jest statycznie typowana, więc można zastosować więcej sztuczek wydajnośiowych
 * W scali można wygodnie serializować funkcje i przesyłać je siecią
-* Kiedy Spark powstawał (2009) Scala miała już 5 lat, Matei Zaharia
-
-TODO: dodać jako listę
-
----
-
-## JVM utrudnia pracę z dużymi danymi!
 
 +++
 
-## GC dobry dla OLTP, słaby w OLAP
+## OLTP vs. OLAP
+
+* narzuty pamięci |
+* duża ilość referencji |
+* GC |
+
+Note:
+
+* Boxing zmiennych - przykład z jdd2017
+* Sortowanie -> słabe układy pamięci / Serializacja - wymaga skakania po pamięci 
+* Garbage collector na niemutowalnych danych
 
 +++
 
 ## Ile pamięci zajmują napisy?
 
- -  `jdd2017`
- - 7 bajtów?  |
- - 14 bajtów? |
+ -  `"jdd2017"`
+ - 8 bajtów?  |
+ - 16 bajtów? |
  - 56 bajtów! |
 
 Note:
@@ -91,12 +84,23 @@ Note:
 
 +++
 
-## JIT nie zawsze inline'uje metody
+## java.util.HashMap
 
 Note:
+* nie grzeszy wydajnością
+* sortowanie
 
-* inline nie działa dla długich metod i poliformizmu
-* boxing wszystkich obiektów
++++?image=assets/images/java_hashmap.png
+
+---
+
+## Projekt Tungsten
+
++++?image=http://periodictable.com/Samples/074.68/s12s.JPG&size=auto
+
++++
+
+![PWN](assets/images/pwn_tungsten.png)
 
 +++
 
@@ -114,16 +118,6 @@ Note:
 - Pojawiły się kolumnowe formaty danych
 - CPU wciąż jest wąskim gardłem, taki jest też spodziewany trend
 - rola CPU w przetwarzaniu: serializacja, hashowanie, kompresja
-
----
-
-## Projekt Tungsten
-
-+++?image=http://periodictable.com/Samples/074.68/s12s.JPG&size=auto
-
-+++
-
-![PWN](assets/images/pwn_tungsten.png)
 
 ---
 
@@ -145,7 +139,9 @@ Note:
 
 ## Nowe typy bazowe
 
-UTF8String -> Array[Byte]
+UTF8String -> byte[] + ilość elementów
+
+wady - w UDFach trzeba transformować na String i w drugą stronę	
 
 +++
 
@@ -165,8 +161,25 @@ UTF8String -> Array[Byte]
 - Wydajne zrzucanie danych na dysk (znamy dokładny rozmiar)
 - `equals()` i `hashCode()` są niepotrzebne, wystarczy porównać binarnie bloki danych
 - TaskMemoryManager do obsługi wirtualnej adresacji
+  * Off-heap -> bezpośrednio 64-bitowy adres
+  * On-heap -> mechanizm witualnego stronnicowania, 13-bitów na numer strony i 27 bitów na offset -> możliwość zaadresowania 1TB pamięci w 5bajtach
+
+Note:
+ * wydajne pamięciowo przechowwyanie danych
+ * unikanie niepotrzebnych skoków po referencjach
+ * prosta serializacja (zrzucenie bajtów) do sieci
+ * equals() to porównwanie bajtów
+ * proste obliczanie rozmiaru danych (ułatwia spilling na dysk), wcześniej heurystyki i aproksymacje
 
 +++
+
+
+## JIT nie zawsze inline'uje metody
+
+Note:
+
+* inline nie działa dla długich metod i poliformizmu
+* boxing wszystkich obiektów
 
 ## Sortowanie
 
