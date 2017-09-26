@@ -24,33 +24,33 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 
 ## Dlaczego Spark jest napisany w Scali?
 
-* 2009: Scala świętuje 5. urodziny |
-* zwięzłe, przyjazne api |
-* interpreter |
-* statyczne typowanie |
-* serializacja funkcji |
+- 2009: Scala świętuje 5. urodziny |
+- zwięzłe, przyjazne api |
+- interpreter |
+- statyczne typowanie |
+- serializacja funkcji |
 
 Note:
-* Hadoop jest już w Javie - zgodność z całością ekosystemu
-* Matei Zaharia
-* Zwięzłe, przyjazne api, podobne do LINQ
-* Scala shell intepreter do eksploracji danych
-* Nie Jython ani Groovy, bo Scala jest statycznie typowana, więc można zastosować więcej sztuczek wydajnośiowych
-* W scali można wygodnie serializować funkcje i przesyłać je siecią
+- Hadoop jest już w Javie - zgodność z całością ekosystemu
+- Matei Zaharia
+- Zwięzłe, przyjazne api, podobne do LINQ
+- Scala shell intepreter do eksploracji danych
+- Nie Jython ani Groovy, bo Scala jest statycznie typowana, więc można zastosować więcej sztuczek wydajnośiowych
+- W scali można wygodnie serializować funkcje i przesyłać je siecią
 
 +++
 
 ## OLTP vs. OLAP
 
-* narzuty pamięci |
-* duża ilość referencji |
-* GC |
+- narzuty pamięci |
+- duża ilość referencji |
+- GC |
 
 Note:
 
-* Boxing zmiennych - przykład z jdd2017
-* Sortowanie -> słabe układy pamięci / Serializacja - wymaga skakania po pamięci 
-* Garbage collector na niemutowalnych danych
+- Boxing zmiennych - przykład z jdd2017
+- Sortowanie -> słabe układy pamięci / Serializacja - wymaga skakania po pamięci 
+- Garbage collector na niemutowalnych danych
 
 +++
 
@@ -62,7 +62,7 @@ Note:
  - 56 bajtów! |
 
 Note:
-* compressed OOPS
+- compressed OOPS
 
 +++
 
@@ -79,18 +79,18 @@ Note:
 
 
 Note:
-* object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
-* w javie 9 - 48 bajtów
+- object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
+- w javie 9 - 48 bajtów
 
 +++
 
 ## java.util.HashMap
 
 Note:
-* nie grzeszy wydajnością
-* sortowanie
+- nie grzeszy wydajnością
+- sortowanie
 
-+++?image=assets/images/java_hashmap.png
++++?image=assets/images/java_hashmap.png&size=auto
 
 ---
 
