@@ -122,7 +122,7 @@ Note:
 
 ---
 
-## Pamieć
+# Pamięć 
 
 +++
 
@@ -217,7 +217,7 @@ Note:
 
 +++
 
-## Volcano
+## Model "Volcano"
 
 ![spark_volcano](assets/images/spark_volcano.png)
 
@@ -240,53 +240,45 @@ case class FilterExec(condition: Expression, child: SparkPlan) {
 }
 ```
 
+[basicPhysicalOperators.scala](https://github.com/apache/spark/blob/master/sql/core/src/main/scala/org/apache/spark/sql/execution/basicPhysicalOperators.scala)
 
 +++
 
-## JIT nie zawsze inline'uje metody
+```
+count = 0;
+for (Record record: df) {
+  if ("jdd2017".equals(record.getConference())) {
+  	count++;
+  }
+}
+```
 
 Note:
-
-* inline nie działa dla długich metod i poliformizmu
-* boxing wszystkich obiektów
-
-
-+++
-
-
-- generowanie kodu
-- optymalizacja użycia cache CPU
-
-- Volcano -> generowanie kodu
-- wektoryzacja
+ - kod nie jest komponowalny
 
 +++
 
 ## Volcano vs student
 
-Volcano: 13.95 mln rekordów/sec
-Kod: 125 mln rekordów/sec
+- Volcano: **13.95** mln rekordów/sec
+- Dedykowany kod: **125** mln rekordów/sec
 
-| Volcano                 | kod studenta                     |
+| Volcano                 | dedykowany kod                   |
 |-------------------------|----------------------------------|
 |wiele wirtualnych funkcji| 0 funkcji                        |
-|dane w pamieci/cache     | dane w cache CPU                 |
+|dane w pamięci/cache     | dane w cache CPU                 |
 | ---                     | loop unrolling, SIMD, pipelining |
 
 +++
 
-## Whole-stage codegen [SPARK-12795](https://issues.apache.org/jira/browse/SPARK-12795)
+## Whole-stage codegen ([SPARK-12795](https://issues.apache.org/jira/browse/SPARK-12795))
 
-Wyszukaj operacje następujące po sobie i włóż do jednej funkcji
-
-- Nie da zastosować dla zewnętrznych bibliotek (UDFy, python, R)
-- Skomplikowane IO i tak wymaga wywołań funkcji
-
-+++
-
-## Wektoryzacja
-
-Przechowywanie danych w kolumnach, nie wierszowo.
+- Job > Stage > Task |
+- pozbieraj operacje z jednego Stage |
+- wygeneruje klasę Javową |
+- skompiluj do bytecodu |
+- wykonaj |
+- nie da się zastosować dla zewnętrznych bibliotek i IO
 
 +++
 
@@ -362,17 +354,39 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 |sum w/ group          | 79 ns  | 10.7 ns |
 |hash join             | 115 ns | 4.0 ns  |
 |sort (8 bit entropy)  | 620 ns	| 5.3 ns  |
-| sort (64 bit entropy)| 620 ns | 40 ns   |
+|sort (64 bit entropy) | 620 ns | 40 ns   |
 |sort-merge join	   | 750 ns | 700 ns  |
+
+[źródło](https://databricks.com/blog/2016/05/11/apache-spark-2-0-technical-preview-easier-faster-and-smarter.html)
+
++++
+
+## Pozostałe optymalizacje
+
+- wektoryzacja 
+- `BytesToBytesMap`
+- sortowanie z prefixami kluczy
 
 ---
 
+# Podsumowanie
+
+- Spark działa na JVM 
+- JVM daje duży narzut na pamieć i CPU, ale zostawia furtkę
+- `sun.misc.Unsafe` nie jest takie złe ;-)
+
+Note:
+ - spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
+
++++
+
 ### Dzięki! Pytania?
+
+![dxc](assets/images/hiring.png)
 
 Note:
 - [Flame graphs](https://db-blog.web.cern.ch/blog/luca-canali/2016-09-spark-20-performance-improvements-investigated-flame-graphs)
 - https://www.slideshare.net/databricks/spark-performance-whats-next
-- [Statystyki operacji po wholestagecodegen](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/6122906529858466/293651311471490/5382278320999420/latest.html)
 - [Wektoryzacja, loop unrolling](https://spoddutur.github.io/spark-notes/second_generation_tungsten_engine.html)
 - [Advanced meetup slajdy](https://www.slideshare.net/cfregly/advanced-apache-spark-meetup-project-tungsten-nov-12-2015)
 - [Prezka databricksa](https://www.youtube.com/watch?v=5ajs8EIPWGI&t=335s)
