@@ -219,10 +219,12 @@ Note:
 
 ## Volcano
 
-```
-case class FilterExec(condition: Expression, child: SparkPlan)
-  extends UnaryExecNode with CodegenSupport with PredicateHelper {
+![spark_volcano](assets/images/spark_volcano.png)
 
++++
+
+```
+case class FilterExec(condition: Expression, child: SparkPlan) {
   protected override def doExecute(): RDD[InternalRow] = {
     val numOutputRows = longMetric("numOutputRows")
     child.execute().mapPartitionsWithIndexInternal { (index, iter) =>
@@ -238,7 +240,6 @@ case class FilterExec(condition: Expression, child: SparkPlan)
 }
 ```
 
-![spark_volcano](assets/images/spark_volcano.png)
 
 +++
 
