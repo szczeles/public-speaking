@@ -202,6 +202,46 @@ TODO
 
 +++
 
+## Ilu jest uczestników JDD 2017?
+
+```
+df.where(df.conference == "jdd2017").count()
+```
+
+```
+select count(*) from df where conference = "jdd2017"
+```
+
+Note:
+- dla uproszczenia - na jednym nodzie
+
++++
+
+## Volcano
+
+```
+case class FilterExec(condition: Expression, child: SparkPlan)
+  extends UnaryExecNode with CodegenSupport with PredicateHelper {
+
+  protected override def doExecute(): RDD[InternalRow] = {
+    val numOutputRows = longMetric("numOutputRows")
+    child.execute().mapPartitionsWithIndexInternal { (index, iter) =>
+      val predicate = newPredicate(condition, child.output)
+      predicate.initialize(0)
+      iter.filter { row =>
+        val r = predicate.eval(row)
+        if (r) numOutputRows += 1
+        r
+      }
+    }
+  }
+}
+```
+
+![spark_volcano](assets/images/spark_volcano.png)
+
++++
+
 ## JIT nie zawsze inline'uje metody
 
 Note:
