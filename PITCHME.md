@@ -1,4 +1,4 @@
-# Apache Spark, czyli jak wycisnąć z JVMa więcej niż fabryka dała
+## Apache Spark, czyli jak wycisnąć z JVMa więcej niż fabryka dała
 
 @JDD2017
 
@@ -7,7 +7,7 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 
 ---
 
-# O mnie
+## O mnie
 
 <ul>
 <li class="fragment">Mariusz Strzelecki</li>
@@ -104,7 +104,7 @@ Note:
 
 +++
 
-## Ostatnie 7 lat sparka:
+## Hardware - trendy
 
 <table>
   <tr>
@@ -123,6 +123,12 @@ Note:
     <td>2015</td>
     <td>500 MB/s</td>
     <td>10 GBps</td>
+    <td>~3 GHz</td>
+  </tr>
+  <tr class="fragment">
+    <td>2020</td>
+    <td>?</td>
+    <td>?</td>
     <td>~3 GHz</td>
   </tr>
 </table>
