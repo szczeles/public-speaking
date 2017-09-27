@@ -282,6 +282,8 @@ Note:
 - Volcano: **13.95** mln rekordów/sec
 - Dedykowany kod: **125** mln rekordów/sec
 
+TODO - jako wykres
+
 | Volcano                 | dedykowany kod                   |
 |-------------------------|----------------------------------|
 |wiele wirtualnych funkcji| 0 funkcji                        |
