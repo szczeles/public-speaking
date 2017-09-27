@@ -258,7 +258,7 @@ Note:
 
 +++
 
-## Volcano vs student
+## Volcano vs dedykowany kod
 
 - Volcano: **13.95** mln rekordów/sec
 - Dedykowany kod: **125** mln rekordów/sec
@@ -278,7 +278,7 @@ Note:
 - wygeneruje klasę Javową |
 - skompiluj do bytecodu |
 - wykonaj |
-- nie da się zastosować dla zewnętrznych bibliotek i IO
+- nie da się zastosować dla zewnętrznych bibliotek i IO |
 
 +++
 
@@ -353,8 +353,6 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 |sum w/o group         | 14 ns  | 0.9 ns  |
 |sum w/ group          | 79 ns  | 10.7 ns |
 |hash join             | 115 ns | 4.0 ns  |
-|sort (8 bit entropy)  | 620 ns	| 5.3 ns  |
-|sort (64 bit entropy) | 620 ns | 40 ns   |
 |sort-merge join	   | 750 ns | 700 ns  |
 
 [źródło](https://databricks.com/blog/2016/05/11/apache-spark-2-0-technical-preview-easier-faster-and-smarter.html)
@@ -373,7 +371,7 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 - Spark działa na JVM |
 - JVM daje duży narzut na pamieć i CPU, ale zostawia furtkę |
-- `sun.misc.Unsafe` nie jest takie złe ;-) |
+- sun.misc.Unsafe nie jest takie złe ;-) |
 
 Note:
  - spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
