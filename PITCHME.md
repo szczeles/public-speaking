@@ -371,9 +371,9 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 # Podsumowanie
 
-- Spark działa na JVM 
-- JVM daje duży narzut na pamieć i CPU, ale zostawia furtkę
-- `sun.misc.Unsafe` nie jest takie złe ;-)
+- Spark działa na JVM |
+- JVM daje duży narzut na pamieć i CPU, ale zostawia furtkę |
+- `sun.misc.Unsafe` nie jest takie złe ;-) |
 
 Note:
  - spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
