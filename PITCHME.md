@@ -1,4 +1,4 @@
-## Apache Spark, czyli jak wycisnąć z JVMa więcej niż fabryka dała
+# Apache Spark, czyli jak wycisnąć z JVMa więcej niż fabryka dała
 
 @JDD2017
 
@@ -7,7 +7,7 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 
 ---
 
-## O mnie
+# O mnie
 
 <ul>
 <li class="fragment">Mariusz Strzelecki</li>
@@ -106,13 +106,26 @@ Note:
 
 ## Ostatnie 7 lat sparka:
 
-TODO - wyanimować
-
-|         | 2010          | 2015           |
-| ------- |:-------------:|:--------------:|
-| Dysk    | 50 MB/s (HDD) | 500 MB/s (SSD) |
-| Sieć    | 1 GBps        | 10 GBps        |
-| CPU     | ~3 GHz        | ~3 GHz         |
+<table>
+  <tr>
+    <th></th>
+    <th>Dysk</th>
+    <th>Sieć</th> 
+    <th>CPU</th>
+  </tr>
+  <tr>
+    <td>2010</td>
+    <td>50 MB/s</td>
+    <td>1 GBps</td>
+    <td>~3 GHz</td>
+  </tr>
+  <tr class="fragment">
+    <td>2015</td>
+    <td>500 MB/s</td>
+    <td>10 GBps</td>
+    <td>~3 GHz</td>
+  </tr>
+</table>
 
 Note:
 - IO w sparku i tak zostało zoptymalizowane 
@@ -363,7 +376,7 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 - wektoryzacja 
 - `BytesToBytesMap`
-- sortowanie z prefixami kluczy
+- "Cache-aware Computation", np. sortowanie z prefixami kluczy
 
 ---
 
@@ -372,6 +385,7 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 - Spark działa na JVM |
 - JVM daje duży narzut na pamieć i CPU, ale zostawia furtkę |
 - sun.misc.Unsafe nie jest takie złe ;-) |
+- czy da się wycisnąć więcej? |
 
 Note:
  - spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
