@@ -229,6 +229,8 @@ Note:
 
 +++
 
+## Volcano i filtrowanie
+
 ```
 case class FilterExec(condition: Expression, child: SparkPlan) {
   protected override def doExecute(): RDD[InternalRow] = {
@@ -250,6 +252,8 @@ case class FilterExec(condition: Expression, child: SparkPlan) {
 
 +++
 
+## Dedykowany kod
+
 ```
 count = 0;
 for (Record record: df) {
@@ -265,7 +269,7 @@ Note:
 +++
 
 
-## Volcano vs dedykowany kod
+## Volcano vs. dedykowany kod
 
 <canvas data-chart="horizontalBar">
 <!-- 
@@ -290,7 +294,7 @@ Note:
 
 +++
 
-## Volcano vs dedykowany kod
+## Volcano vs. dedykowany kod
 
 | Volcano                 | dedykowany kod                   |
 |-------------------------|----------------------------------|
