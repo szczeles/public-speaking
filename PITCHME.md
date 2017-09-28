@@ -264,6 +264,9 @@ Note:
 
 +++
 
+
+## Volcano vs dedykowany kod
+
 <canvas data-chart="horizontalBar">
 <!-- 
 {
@@ -288,11 +291,6 @@ Note:
 +++
 
 ## Volcano vs dedykowany kod
-
-- Volcano: **13.95** mln rekordów/sec
-- Dedykowany kod: **125** mln rekordów/sec
-
-TODO - jako wykres
 
 | Volcano                 | dedykowany kod                   |
 |-------------------------|----------------------------------|
