@@ -264,7 +264,7 @@ Note:
 
 +++
 
-<canvas data-chart="line">
+<canvas data-chart="bar">
 <!-- 
 {
  "data": {
