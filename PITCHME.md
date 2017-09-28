@@ -264,7 +264,7 @@ Note:
 
 +++
 
-<canvas data-chart="bar">
+<canvas data-chart="horizontalBar">
 <!-- 
 {
  "data": {
