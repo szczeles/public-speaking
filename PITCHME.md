@@ -155,6 +155,8 @@ Note:
 
 +++?image=assets/images/classic_row.png&size=auto
 
++++
+
 ## sun.misc.Unsafe
 
 Note:
@@ -168,9 +170,8 @@ Note:
 
 ![unsafe_row](assets/images/unsafe_row.png)
 
-- wydajne (pamięciowo) przechowywanie danych |
-- serializacja | 
-- trywialne porównywanie |
+- wydajne przechowywanie danych |
+- trywialna serializacja i proste porównywanie | 
 - spilling |
 
 Note:
@@ -260,6 +261,22 @@ for (Record record: df) {
 
 Note:
  - kod nie jest komponowalny
+
++++
+
+<canvas class="stretch" data-chart="bar">
+My first dataset, 65, 59, 80, 81, 56, 55, 40
+<!-- This is a comment that will be ignored -->
+My second dataset, 28, 48, 40, 19, 86, 27, 90
+<!-- 
+{ 
+ "data" : {
+  "labels" : ["Enero", "Febrero", "Marzo", "Avril", "Mayo", "Junio", "Julio"], 
+  "datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
+ }
+}
+-->
+</canvas>
 
 +++
 
