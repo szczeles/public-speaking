@@ -271,7 +271,7 @@ Note:
   "labels": ["wierszy/s"],
   "datasets": [
    {
-    "data":[13.95,
+    "data":[13.95],
     "label":"Volcano","backgroundColor":"rgba(20,220,220,.8)"
    },
    {
