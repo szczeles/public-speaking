@@ -153,7 +153,7 @@ Note:
 - 50% oszczędności RAM
 - wady - w UDFach trzeba transformować na String i w drugą stronę	
 
-+++
++++?image=assets/images/classic_row.png&size=auto
 
 ## sun.misc.Unsafe
 
@@ -166,21 +166,7 @@ Note:
 
 ## UnsafeRow
 
-TODO - przerobić na obrazek, nie mieści się
-na obrazku też Array[Object]
-
-```
-+-------------------------------------------------------+
-| null bits | primitive values | variable-length values |
-+-------------------------------------------------------+
-
-{
-	"konferencja: "jdd",                +-------|
-	"miasto": "Kraków"    +----+--------|-------v--------------------+
-	"rok": 2017    -----> | 00 | 2017 | 4 | 6 | 3 | jdd | 6 | Kraków |	
-}                         +----+------------|-------------^----------+
-                                            +-------------|
-``` 
+![unsafe_row](assets/images/unsafe_row.png)
 
 - wydajne (pamięciowo) przechowywanie danych |
 - serializacja | 
