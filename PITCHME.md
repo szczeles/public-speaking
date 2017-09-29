@@ -194,13 +194,6 @@ Note:
 - pozbywanie się nadmiernego GC
 - w on-heap java może dowolnie przenosić strony, potrzebna tablica stron
 
-+++
-
-TODO
-
-- BytesToBytesMap -> wydajne przeszukiwanie
-
-
 ---
 
 # Whole-stage code generation
@@ -293,24 +286,24 @@ Note:
 
 +++
 
-## Volcano vs. dedykowany kod
-
-| Volcano                 | dedykowany kod                   |
-|-------------------------|----------------------------------|
-|wiele wirtualnych funkcji| 0 funkcji                        |
-|dane w pamięci/cache     | dane w cache CPU                 |
-| ---                     | loop unrolling, SIMD, pipelining |
+| Volcano            | dedykowany kod       |
+|--------------------|----------------------|
+|wirtualne funkcje   | 0 funkcji            |
+|skakanie po pamięci | dane w cache CPU     |
+| ---                | loop unrolling, SIMD |
 
 +++
 
-## Whole-stage codegen ([SPARK-12795](https://issues.apache.org/jira/browse/SPARK-12795))
+## Whole-stage CodeGen 
+
+## ([SPARK-12795](https://issues.apache.org/jira/browse/SPARK-12795))
 
 - Job > Stage > Task |
 - pozbieraj operacje z jednego Stage |
 - wygeneruj klasę Javową |
 - skompiluj do bytecodu |
 - wykonaj |
-- nie da się zastosować dla zewnętrznych bibliotek i IO |
+- nie da się zastosować dla bibliotek i IO |
 
 +++
 
