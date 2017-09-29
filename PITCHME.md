@@ -167,7 +167,7 @@ Note:
 
 ## UnsafeRow
 
-![unsafe_row](assets/images/unsafe_row.png)
+![unsafe_row](assets/images/unsaferow.png)
 
 - wydajne przechowywanie danych |
 - trywialna serializacja i proste porównywanie | 
