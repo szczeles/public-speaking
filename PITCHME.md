@@ -377,6 +377,10 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 +++
 
+![spark_code_generation](assets/images/spark_java_generated_code.png)
+
++++
+
 ## Czy naprawdę warto?
 
 |                      | OFF    | ON      |
