@@ -307,7 +307,7 @@ Note:
 
 - Job > Stage > Task |
 - pozbieraj operacje z jednego Stage |
-- wygeneruje klasę Javową |
+- wygeneruj klasę Javową |
 - skompiluj do bytecodu |
 - wykonaj |
 - nie da się zastosować dla zewnętrznych bibliotek i IO |
