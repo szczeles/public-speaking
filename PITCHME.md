@@ -363,9 +363,9 @@ private void agg_doAggregateWithoutKey() throws java.io.IOException {
 
 ![arrow](https://raw.githubusercontent.com/gitpitch/code-presenting/master/assets/down-arrow.png)
 
-![logo](assets/images/janino_logo.png)
+## [Janino](http://janino-compiler.github.io/janino/)
 
-[Janino](http://janino-compiler.github.io/janino/)
+![logo](assets/images/janino_logo.png)
 
 Note:
 janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
