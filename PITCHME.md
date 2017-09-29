@@ -13,7 +13,6 @@ będzie generalnie o optymalizacji JVM, a Spark jako przykład
 <li class="fragment">Mariusz Strzelecki</li>
 <li class="fragment"><img src="http://day.torun.jug.pl/wp-content/uploads/2017/03/jug5d_2.png" width="20%" /></li>
 <li class="fragment"><img src="http://assets1.dxc.technology/newsroom/images/dxc_logo_hz_blk_rgb_300.png", width="40%" /></li>
-<li class="fragment">stackoverflow: **spark** i **pyspark**</li>
 </ul>
 
 ---
