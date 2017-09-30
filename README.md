@@ -1,3 +1,3 @@
 ## Public speaking
 
-* jdd2017, [![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/szczeles/public-speaking/jdd2017)
+* [JDD2017](https://jdd.org.pl/): [slides](https://gitpitch.com/szczeles/public-speaking/jdd2017), [source](https://github.com/szczeles/public-speaking/tree/jdd2017)
