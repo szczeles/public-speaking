@@ -135,16 +135,11 @@ Note:
 - 50% oszczędności RAM
 - wady - w UDFach trzeba transformować na String i w drugą stronę	
 
-+++?image=assets/images/classic_row.png&size=auto
-
 +++
 
-## sun.misc.Unsafe
+## "Klasyczny" Row
 
-Note:
-- niskopoziomowe zarządzanie, m.in. pamiecią
-- jawna alokacja/zwalnianie pamięci
-- implementacja mocno zależy od platformy!
+![row](image=assets/images/classic_row.png)
 
 +++
 
@@ -161,6 +156,15 @@ Note:
  * serializacja: unikanie niepotrzebnych skoków po referencjach
  * equals() to porównwanie bajtów
  * proste obliczanie rozmiaru danych (ułatwia spilling na dysk), wcześniej heurystyki i aproksymacje
+
++++
+
+## sun.misc.Unsafe
+
+Note:
+- niskopoziomowe zarządzanie, m.in. pamiecią
+- jawna alokacja/zwalnianie pamięci
+- implementacja mocno zależy od platformy!
 
 +++?image=assets/images/spark_unsafe.png&size=auto
 
@@ -351,7 +355,7 @@ private void agg_doAggregateWithoutKey() throws java.io.IOException {
 Note:
 janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
-+++?image=assets/images/spark_java_generated_code.png&size=auto
++++?image=assets/images/spark_java_generated_code.png&size=cover
 
 +++
 
