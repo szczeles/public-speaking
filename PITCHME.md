@@ -80,7 +80,7 @@ Note:
 
 ---?image=assets/images/tungsten.jpg&size=cover
 
-<h2>2015: Project Tungsten</h2>
+<h2 style='color: white;'>2015: Project Tungsten<br /><br /><br /><br /></h2>
 
 +++
 
