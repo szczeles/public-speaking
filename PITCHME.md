@@ -71,7 +71,7 @@ Note:
      4 | String.hash32              6 | padding
 ```
 
- - [JEP-254](http://openjdk.java.net/jeps/254) na ratunek!
+- [JEP-254](http://openjdk.java.net/jeps/254) na ratunek! |
 
 
 Note:
@@ -80,7 +80,7 @@ Note:
 
 ---
 
-+++?image=http://periodictable.com/Samples/074.68/s12s.JPG&size=auto
++++?image=assets/images/tungsten.jpg?size=cover
 
 <h2>2015: Project Tungsten</h2>
 
@@ -183,7 +183,7 @@ Note:
 
 ---
 
-+++?image=https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg?size=auto
++++?image=http://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg?size=auto
 
 +++
 
@@ -357,7 +357,7 @@ private void agg_doAggregateWithoutKey() throws java.io.IOException {
 Note:
 janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
-+++?image=assets/images/spark_java_generated_code.png&size=auto 120%
++++?image=assets/images/spark_java_generated_code.png&size=auto
 
 +++
 
