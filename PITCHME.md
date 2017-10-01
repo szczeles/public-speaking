@@ -71,16 +71,14 @@ Note:
      4 | String.hash32              6 | padding
 ```
 
-- [JEP-254](http://openjdk.java.net/jeps/254) na ratunek! |
+- [JEP-254](http://openjdk.java.net/jeps/254) na ratunek!
 
 
 Note:
 - object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
 - w javie 9 - 48 bajtów
 
----
-
-+++?image=assets/images/tungsten.jpg?size=cover
+---?image=assets/images/tungsten.jpg&size=cover
 
 <h2>2015: Project Tungsten</h2>
 
@@ -127,7 +125,7 @@ Note:
 
 ---
 
-+++?image=https://www.quietpc.com/images/products/nh-d15s-large.jpg?size=auto
++++?image=https://www.quietpc.com/images/products/nh-d15s-large.jpg&size=auto
 
 +++
 
@@ -183,7 +181,7 @@ Note:
 
 ---
 
-+++?image=http://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg?size=auto
++++?image=http://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg&size=auto
 
 +++
 
