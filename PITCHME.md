@@ -2,9 +2,6 @@
 
 @JDD2017
 
-Note:
-będzie generalnie o optymalizacji JVM, a Spark jako przykład
-
 ---
 
 ## O mnie
@@ -81,21 +78,11 @@ Note:
 - object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
 - w javie 9 - 48 bajtów
 
-+++
-
-## java.util.HashMap
-
-Note:
-- nie grzeszy wydajnością
-- sortowanie
-
-+++?image=assets/images/java_hashmap.png&size=auto
-
 ---
 
-# 2015: Projekt Tungsten
-
 +++?image=http://periodictable.com/Samples/074.68/s12s.JPG&size=auto
+
+<h2>2015: Project Tungsten</h2>
 
 +++
 
@@ -140,7 +127,7 @@ Note:
 
 ---
 
-# Pamięć 
++++?image=https://www.quietpc.com/images/products/nh-d15s-large.jpg?size=auto
 
 +++
 
@@ -196,7 +183,7 @@ Note:
 
 ---
 
-# Whole-stage code generation
++++?image=https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg?size=auto
 
 +++
 
@@ -267,7 +254,7 @@ Note:
 <!-- 
 {
  "data": {
-  "labels": ["wierszy/s"],
+  "labels": ["mln wierszy/s"],
   "datasets": [
    {
     "data":[13.95],
@@ -370,7 +357,7 @@ private void agg_doAggregateWithoutKey() throws java.io.IOException {
 Note:
 janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
-+++?image=assets/images/spark_java_generated_code.png&size=auto
++++?image=assets/images/spark_java_generated_code.png&size=auto 120%
 
 +++
 
@@ -399,15 +386,15 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 # Podsumowanie
 
-- Spark omija organiczenia JVMa |
+- Spark omija ograniczenia JVMa |
 - sun.misc.Unsafe nie jest takie złe ;-) |
 - czy da się wycisnąć więcej? |
 
 Note:
- - spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
- - omija ograniczenia tylko w przetwarzaniu, webui, komunikacja między nodami, optymalizacje planu wykonania - nie
- - unsafe jest niebezpieczne w rękach progamisty, który przesiadł się z C
- - w rękach inżyenia świadomego ograniczeń - jest OK
+- spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
+- omija ograniczenia tylko w przetwarzaniu, webui, komunikacja między nodami, optymalizacje planu wykonania - nie
+- unsafe jest niebezpieczne w rękach progamisty, który przesiadł się z C
+- w rękach inżyenia świadomego ograniczeń - jest OK
 
 +++
 
