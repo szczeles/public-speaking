@@ -139,7 +139,7 @@ Note:
 
 ## "Klasyczny" Row
 
-![row](image=assets/images/classic_row.png)
+![row](assets/images/classic_row.png)
 
 +++
 
