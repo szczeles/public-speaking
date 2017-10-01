@@ -390,6 +390,7 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 ## Pozostałe optymalizacje
 
+- Catalyst
 - wektoryzacja 
 - `BytesToBytesMap`
 - "Cache-aware Computation", np. sortowanie z prefixami kluczy
@@ -398,13 +399,15 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 # Podsumowanie
 
-- Spark działa na JVM |
-- JVM daje duży narzut na pamieć i CPU, ale zostawia furtkę |
+- Spark omija organiczenia JVMa |
 - sun.misc.Unsafe nie jest takie złe ;-) |
 - czy da się wycisnąć więcej? |
 
 Note:
  - spark działa na JVM: przyczyna suckcesu, korzysta z bogactwa bibliotek
+ - omija ograniczenia tylko w przetwarzaniu, webui, komunikacja między nodami, optymalizacje planu wykonania - nie
+ - unsafe jest niebezpieczne w rękach progamisty, który przesiadł się z C
+ - w rękach inżyenia świadomego ograniczeń - jest OK
 
 +++
 
