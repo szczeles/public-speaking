@@ -80,7 +80,7 @@ Note:
 
 ---?image=assets/images/tungsten.jpg&size=cover
 
-<h2 style='color: white;'>2015: Project Tungsten<br /><br /><br /><br /><br /><br /><br /><br /></h2>
+<h2 style='color: white;'>2015: Project Tungsten<br /><br /><br /><br /><br /><br /><br /></h2>
 
 +++
 
@@ -123,9 +123,7 @@ Note:
 - CPU wciąż jest wąskim gardłem, taki jest też spodziewany trend
 - rola CPU w przetwarzaniu: serializacja, hashowanie, kompresja
 
----
-
-+++?image=https://www.quietpc.com/images/products/nh-d15s-large.jpg&size=auto
+---?image=https://www.quietpc.com/images/products/nh-d15s-large.jpg&size=contain
 
 +++
 
@@ -179,9 +177,7 @@ Note:
 - pozbywanie się nadmiernego GC
 - w on-heap java może dowolnie przenosić strony, potrzebna tablica stron
 
----
-
-+++?image=http://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg&size=auto
+---?image=http://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAOiAAAAJGU0NTk5ZTU4LTgxYzktNGY3YS05MWRlLTM4NDk2OTFiODlkMw.jpg&size=cover
 
 +++
 
