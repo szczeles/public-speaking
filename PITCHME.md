@@ -16,6 +16,9 @@
 
 ![Spark logo](http://blog.scottlogic.com/bjedrzejewski/assets/apache-spark-logo.png)
 
+Note:
+JVM!!
+
 +++
 
 ## Dlaczego Spark jest napisany w Scali?
@@ -36,7 +39,7 @@ Note:
 
 +++
 
-## OLTP vs. OLAP
+## Ograniczenia JVMa
 
 - narzuty pamięci |
 - duża ilość referencji |
@@ -47,36 +50,6 @@ Note:
 - Boxing zmiennych - przykład z jdd2017
 - Sortowanie -> słabe układy pamięci / Serializacja - wymaga skakania po pamięci 
 - Garbage collector na niemutowalnych danych
-
-+++
-
-## Ile pamięci zajmują napisy?
-
- -  `"jdd2017"`
- - 8 bajtów?  |
- - 16 bajtów? |
- - 56 bajtów! |
-
-Note:
-- compressed OOPS
-
-+++
-
-```
- 	new String("jdd2017")
-
-    12 | header 
-     4 | char[] reference -------> 12 | header
-     4 | String.hash               14 | char[] (UTF-16)
-     4 | String.hash32              6 | padding
-```
-
-- [JEP-254](http://openjdk.java.net/jeps/254) na ratunek!
-
-
-Note:
-- object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
-- w javie 9 - 48 bajtów
 
 ---?image=assets/images/tungsten.jpg&size=cover
 
@@ -127,6 +100,36 @@ Note:
 
 +++
 
+## Ile pamięci zajmują napisy?
+
+ -  `"jdd2017"`
+ - 8 bajtów?  |
+ - 16 bajtów? |
+ - 56 bajtów! |
+
+Note:
+- compressed OOPS
+- java 1.7, 1.8
+
++++
+
+```
+ 	new String("jdd2017")
+
+    12 | header 
+     4 | char[] reference -------> 12 | header
+     4 | String.hash               14 | char[] (UTF-16)
+     4 | String.hash32              6 | padding
+```
+
+- [JEP-254](http://openjdk.java.net/jeps/254) na ratunek!
+
+
+Note:
+- object's class, ID and status flags such as whether the object is currently reachable, currently synchronization-locked etc.
+- w javie 9 - 48 bajtów
++++
+
 ## UTF8String 
 
 byte[] + ilość elementów
@@ -137,7 +140,7 @@ Note:
 
 +++
 
-## "Klasyczny" Row
+## GenericInternalRow
 
 ![row](assets/images/classic_row.png)
 
