@@ -1,4 +1,4 @@
-## Apache Spark, czyli jak wycisnąć z JVMa więcej niż fabryka dała
+## Apache Spark, czyli jak wycisnąć z JVM'a więcej niż fabryka dała
 
 @JDD2017
 
@@ -39,7 +39,7 @@ Note:
 
 +++
 
-## Ograniczenia JVMa
+## Ograniczenia JVM'a
 
 - narzuty pamięci |
 - duża ilość referencji |
@@ -387,7 +387,7 @@ janino wspiera kod zgodny z Javą 1.7 (z wyjątkami)
 
 # Podsumowanie
 
-- Spark omija ograniczenia JVMa |
+- Spark omija ograniczenia JVM'a |
 - sun.misc.Unsafe nie jest takie złe ;-) |
 - czy da się wycisnąć więcej? |
 
