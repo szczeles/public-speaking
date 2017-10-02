@@ -123,7 +123,7 @@ Note:
 - CPU wciąż jest wąskim gardłem, taki jest też spodziewany trend
 - rola CPU w przetwarzaniu: serializacja, hashowanie, kompresja
 
----?image=https://jurnalweb.com/wp-content/uploads/2016/03/compression-image.jpg&size=contain
+---?image=https://jurnalweb.com/wp-content/uploads/2016/03/compression-image.jpg&size=cover
 
 +++
 
