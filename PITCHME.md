@@ -17,7 +17,9 @@
 ![Spark logo](http://blog.scottlogic.com/bjedrzejewski/assets/apache-spark-logo.png)
 
 Note:
-JVM!!
+- Parę słów o sparku, a potem konkrety
+- JVM!!
+- Hadoop w javie, 2006, potem cały ekosystem w javie
 
 +++
 
