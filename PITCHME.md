@@ -9,7 +9,7 @@ pyData Warsaw 2017
 <ul>
 <li class="fragment">Mariusz Strzelecki</li>
 <li class="fragment"><img src="http://assets1.dxc.technology/newsroom/images/dxc_logo_hz_blk_rgb_300.png", width="40%" /></li>
-<li class="fragment">stackoverflow task **pyspark** and **spark**</li>
+<li class="fragment">stackoverflow tags **pyspark** and **spark**</li>
 </ul>
 
 Note:
