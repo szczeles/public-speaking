@@ -81,7 +81,7 @@ Note:
  - deploy new model without loosing data
  - push pointer to the past
 
- ---
+---
 
 # Thank you!
 ## Questions?
