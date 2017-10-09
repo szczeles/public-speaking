@@ -24,8 +24,8 @@ Note:
 - weather conditions (fog, wind, rain, snow, blinding sun) |
 - traffic: |
   - road occupancy |
-  - gaps between vehicles and their length |
   - vehicles speed (compared to allowed speed) |
+  - gaps between vehicles and their length |
 - road shape, surface quality, neighbourhood |
 
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
@@ -47,9 +47,7 @@ Note:
  - IoT (sensors, cars) will not wait off-line data
  - Events - search events from users should have instant impact on what we deliver to users
 
----
-
-# Apache Kafka
++++?image=https://kafka.apache.org/images/logo.png&size=contain
 
 Note:
  - distributed log/journal
@@ -59,7 +57,7 @@ Note:
  - partitions paradighm - multiple consumers
  - from 0.11 (newest release) transactions and exactly-once delivery - so can be used as enterprise message bus
 
----
++++
 
 # Python frameworks
 
