@@ -21,14 +21,14 @@ Note:
 
 ## Read safety "features"
 
-- weather conditions (fog, wind, rain, snow, blinding sun)
-- traffic:
-  - road occupancy
-  - gaps between vehicles and their length
-  - vehicles speed (compared to allowed speed)
-- road shape, surface quality, neighbourhood
+- weather conditions (fog, wind, rain, snow, blinding sun) |
+- traffic: |
+  - road occupancy |
+  - gaps between vehicles and their length |
+  - vehicles speed (compared to allowed speed) |
+- road shape, surface quality, neighbourhood |
 
-+++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=cover
++++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
 
 +++
 
