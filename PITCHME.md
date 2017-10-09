@@ -17,24 +17,26 @@ Note:
 
 ---?image=https://img00.deviantart.net/b90d/i/2009/314/9/f/welcome_to_accident_by_howardtj43147.jpg&size=cover
 
----
++++
 
-# Read safety "features"
+## Read safety "features"
 
 - weather conditions (fog, wind, rain, snow, blinding sun)
 - traffic:
   - road occupancy
-  - vehicle types
+  - gaps between vehicles and their length
   - vehicles speed (compared to allowed speed)
 - road shape, surface quality, neighbourhood
 
----
++++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=cover
+
++++
 
 # DXC
 
 https://dgxcentre.com/using-data-analytics-to-make-roads-safer/
 
-TODO - screenshow
+TODO - screenshot
 
 ---
 
