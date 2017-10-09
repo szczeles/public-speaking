@@ -15,6 +15,27 @@ pyData Warsaw 2017
 Note:
  - data ecosystem engineer, not data scientists
 
+---?image=https://img00.deviantart.net/b90d/i/2009/314/9/f/welcome_to_accident_by_howardtj43147.jpg&size=cover
+
+---
+
+# Read safety "features"
+
+- weather conditions (fog, wind, rain, snow, blinding sun)
+- traffic:
+  - road occupancy
+  - vehicle types
+  - vehicles speed (compared to allowed speed)
+- road shape, surface quality, neighbourhood
+
+---
+
+# DXC
+
+https://dgxcentre.com/using-data-analytics-to-make-roads-safer/
+
+TODO - screenshow
+
 ---
 
 # Streaming 
@@ -87,7 +108,7 @@ Note:
 ## Questions?
 
 Note:
-- https://www.google.pl/search?q=welcome+to+accident&source=lnms&tbm=isch&sa=X&ved=0ahUKEwje6JK0rOPWAhXDXhQKHdF6DG8Q_AUICigB&biw=1707&bih=844
+- 
 - https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/chapter15_01.htm#notee
 - http://www.cobrasoftwares.in/wp-content/uploads/2016/06/vslam-640x383.png
 - https://camo.githubusercontent.com/825e165b317d2e3ace789296b2d350817f9e765e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3837332f312a5569567048753741653878675f50766962676e4655512e6a706567
