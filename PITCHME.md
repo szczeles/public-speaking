@@ -105,6 +105,14 @@ Note:
 
 [TODO - pseudokod z windowingiem]
 
++++
+
+## Battle results
+
+|Challenge|Raw|Spark|Winton|
+|---------|---|-----|------|
+|Windowing|[BAD](http://www.iconninja.com/files/617/943/793/valid-up-positive-good-thumb-yes-ok-success-pro-accept-icon.png)|OK|OK|
+
 ---
 
 # 2. Streams join
