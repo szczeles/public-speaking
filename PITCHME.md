@@ -38,6 +38,12 @@ https://dgxcentre.com/using-data-analytics-to-make-roads-safer/
 
 TODO - screenshot
 
++++?image=assets/images/model_building_1.png&size=cover
+
++++?image=assets/images/model_building_2.png&size=cover
+
++++?image=assets/images/model_building_3.png&size=cover
+
 ---
 
 # Streaming 
