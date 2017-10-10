@@ -63,50 +63,98 @@ Note:
  - partitions paradighm - multiple consumers
  - from 0.11 (newest release) transactions and exactly-once delivery - so can be used as enterprise message bus
 
++++?image=assets/images/model_building_4.png&size=cover
+
 +++
 
-# Python frameworks
+# Real-time approach challenges
 
-- raw client
-- spark streaming
-- winton kafka sterams
+- induction loops events are atomic |
+- streams do not look joinable |
+- processing scalability |
 
----
++++
 
-# Simplest approach TODO-IMG (Section)
+# Python kafka frameworks
 
-One event arrives:
-- all data are in place
-- we have numeric values (not video/images)
-- model is final
-
-## All frameworks work fine :-)
+- ["raw" kafka client](https://github.com/confluentinc/confluent-kafka-python)
+- [Spark Streaming](https://spark.apache.org/docs/2.2.0/streaming-kafka-0-10-integration.html)
+- [Winton Kafka Streams](https://github.com/wintoncode/winton-kafka-streams)
 
 ---
 
-# Not all data in place TODO-IMG (Section)
+# 1. Merging induction loops events
 
-For some properties need to:
-- join with other stream
-- join using REST API calls/databases/off-line data
+[TODO - jakiś obrazek związany z mergem]
 
-Note:
- - temperature + wind
- - is driver safe
++++
+
+## Raw client
+
+[TODO - pseudokod z poll()]
+
++++
+
+## Spark Streaming
+
+[TODO - pseudokod z windowingiem]
+
++++
+
+## Kafka Streams
+
+[TODO - pseudokod z windowingiem]
 
 ---
 
-# Video data TODO-IMG (Section)
+# 2. Streams join
 
-- grab only latest frame
-- grab all frames and process in parallel way
++++
+
+## Raw client
+
+Nie da się :-(
+
++++
+
+## Spark Streaming
+
+[TODO - pseudokod z join]
+
++++
+
+## Kafka Streams
+
+[TODO - pseudokod z join]
 
 ---
 
-# Model upgrade TODO-IMG (Section)
+# 3. Scalability
 
- - deploy new model without loosing data
- - push pointer to the past
++++
+
+## Raw client
+
+Nie da się :-(
+
++++
+
+## Spark Streaming
+
+[TODO - pseudokod z join]
+
++++
+
+## Kafka Streams
+
+[TODO - pseudokod z join]
+
+---
+
+## Other challenges
+
+- Kafka security (authorization, encryption)
+- Model upgrade
 
 ---
 
