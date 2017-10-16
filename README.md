@@ -14,7 +14,7 @@ To start zookeeper and kafka (with data storage in `/tmp/` directory)
 
 Install from pip:
 
-   sudo pip3 install confluent_kafka
+    sudo pip3 install confluent_kafka
 
 The library required `librdkafka` installed on the system. For more information visit [confluent_kafka documentation](https://github.com/confluentinc/confluent-kafka-python#prerequisites)
 
@@ -29,3 +29,7 @@ Use pip with github link:
     sudo pip3 install git+https://github.com/wintoncode/winton-kafka-streams
 
 Python 3.6 is required to run the library!
+
+## Generators
+
+Provided generators simulate inductive loop events (approx 1000/sec) and weather sensors events (one event per second).
