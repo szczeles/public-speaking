@@ -55,6 +55,8 @@ Note:
 
 +++?image=https://kafka.apache.org/images/logo.png&size=contain
 
+[TODO] trochę więcej o kafce -> producer -> topics(part1, part2, 3) -> consumer
+
 Note:
  - distributed log/journal
  - 2011
@@ -62,6 +64,7 @@ Note:
  - multiple producers
  - partitions paradighm - multiple consumers
  - from 0.11 (newest release) transactions and exactly-once delivery - so can be used as enterprise message bus
+ - really good support
 
 +++?image=assets/images/model_building_4.png&size=cover
 
@@ -129,6 +132,9 @@ Nie da się :-(
 
 [TODO - pseudokod z join]
 
+Note:
+ - https://issues.apache.org/jira/browse/SPARK-18791 - strustured steraming do not have joins
+
 +++
 
 ## Kafka Streams
@@ -176,3 +182,18 @@ Note:
 - https://camo.githubusercontent.com/825e165b317d2e3ace789296b2d350817f9e765e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3837332f312a5569567048753741653878675f50766962676e4655512e6a706567
 - http://www.remotemagazine.com/main/wp-content/uploads/2016/06/1-Classification.jpg
 - https://i.ytimg.com/vi/0tTk9_XHQxY/maxresdefault.jpg
+- http://www.mdpi.com/1424-8220/15/10/27201/pdf "Vehicle Classification Using the Discrete Fourier Transform with Traffic Inductive Sensors"
+
+
+Spark:
+
+ - https://issues.apache.org/jira/browse/SPARK-16534 - no kafka 0.10 support in DStreams
+
+|framework                  | stream joins | security  |
+|---------------------------|--------------|-----------|
+|Spark Streaming            | YES          | NO        |
+|Spark Structured Streaming | NO           | SSL       |
+|Raw client                 | NO           | SSL, SASL |
+
+
+
