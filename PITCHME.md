@@ -29,7 +29,7 @@ Note:
 - road shape, surface quality, neighbourhood |
 - calendar: day of week, national holiday |
 
-+++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
++++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=cover
 
 +++?image=assets/images/loop-controller.jpg&size=contain
 
@@ -47,11 +47,11 @@ Note:
 - weather |
 - road shape and condition |
 
-+++?image=https://i.imgur.com/KkUB0dL.jpg&size=contain
-
 +++?image=assets/images/model_building_2.png&size=cover
 
 +++?image=assets/images/model_building_3.png&size=cover
+
++++?image=https://i.imgur.com/KkUB0dL.jpg&size=contain
 
 ---
 
