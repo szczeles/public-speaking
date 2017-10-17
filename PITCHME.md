@@ -31,9 +31,9 @@ Note:
 
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
 
-+++?image=assets/loop-controller.jpg&size=contain
++++?image=assets/images/loop-controller.jpg&size=contain
 
-+++?image=assets/flanders.png&size=contain
++++?image=assets/images/flanders.png&size=contain
 
 +++?image=assets/images/model_building_1.png&size=cover
 
