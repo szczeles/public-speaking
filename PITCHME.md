@@ -21,24 +21,33 @@ Note:
 
 ## Read safety "features"
 
-- weather conditions (fog, wind, rain, snow, blinding sun) |
+- weather conditions (fog, wind, rain, snow, sun) |
 - traffic: |
   - road occupancy |
   - vehicles speed (compared to allowed speed) |
   - gaps between vehicles and their length |
 - road shape, surface quality, neighbourhood |
+- calendar: day of week, national holiday |
 
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
 
-+++
++++?image=assets/loop-controller.jpg&size=contain
 
-# DXC
-
-https://dgxcentre.com/using-data-analytics-to-make-roads-safer/
-
-TODO - screenshot
++++?image=assets/flanders.png&size=contain
 
 +++?image=assets/images/model_building_1.png&size=cover
+
++++
+
+# Example model
+
+- traffic statistics (average speed, average gap, min gap, number of cars) on: |
+   - 1-minute window |
+   - 10-minutes window |
+- weather |
+- road shape and condition |
+
++++?image=https://i.imgur.com/KkUB0dL.jpg&size=contain
 
 +++?image=assets/images/model_building_2.png&size=cover
 
