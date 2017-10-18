@@ -288,29 +288,33 @@ cars_stats_with_point_data.join(weather_state)
 
 ---
 
-# And the winner is...
+## And the winner is...
 
 1. Spark Streaming
 2. Winton Kafka Streams
 3. Raw client
 
-<img src="https://image.flaticon.com/icons/png/128/25/25231.png" style="width: 64px"> **szczeles/public-speaking/pydata2017**
+<img src="https://image.flaticon.com/icons/png/128/25/25231.png" style="width: 64px"> **szczeles/public-speaking**, branch: **pydata2017**
 
----
++++
 
 ## Other challenges
 
-- Kafka security (authorization, encryption) |
-- Updating model definition |
-- High availability |
-- Performance |
+- kafka security (authorization, encryption) |
+- updating model definition |
+- high availability |
+- features support (like exactly-once delivery) |
+- performance is a key |
+
+Spark:
+ - https://issues.apache.org/jira/browse/SPARK-16534 - no kafka 0.10 support in DStreams
 
 ---
 
 # Summary
 
-* TODO
-* TODO2
+- real-time vs. micro-batching | 
+- no silver bullet in pure python |
 
 +++
 
@@ -320,32 +324,5 @@ cars_stats_with_point_data.join(weather_state)
 
 
 Note:
-- 
 - https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/chapter15_01.htm#notee
-- http://www.cobrasoftwares.in/wp-content/uploads/2016/06/vslam-640x383.png
-- https://camo.githubusercontent.com/825e165b317d2e3ace789296b2d350817f9e765e/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3837332f312a5569567048753741653878675f50766962676e4655512e6a706567
-- http://www.remotemagazine.com/main/wp-content/uploads/2016/06/1-Classification.jpg
-- https://i.ytimg.com/vi/0tTk9_XHQxY/maxresdefault.jpg
 - http://www.mdpi.com/1424-8220/15/10/27201/pdf "Vehicle Classification Using the Discrete Fourier Transform with Traffic Inductive Sensors"
-
-
-Spark:
-
- - https://issues.apache.org/jira/browse/SPARK-16534 - no kafka 0.10 support in DStreams
-
-|framework                  | stream joins | security  |
-|---------------------------|--------------|-----------|
-|Spark Streaming            | YES          | NO        |
-|Spark Structured Streaming | NO           | SSL       |
-|Raw client                 | NO           | SSL, SASL |
-
-
-
-
-+++
-
-## Battle results
-
-|Challenge|Raw|Spark|Winton|
-|---------|---|-----|------|
-|Windowing|![BAD](http://www.iconninja.com/files/617/943/793/valid-up-positive-good-thumb-yes-ok-success-pro-accept-icon.png)|OK|OK|
