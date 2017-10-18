@@ -162,12 +162,10 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config) \
 def generate_windows(): # every minute
     short_window = data[
         (ts_field >= current_time - one_minute) &
-        (ts_field <= current_time)
-    ]
+        (ts_field <= current_time)]
     long_window = data[
         (ts_field >= current_time - ten_minutes) &
-        (ts_field <= current_time)
-    ]
+        (ts_field <= current_time)]
 
 while True:
     msg = consumer.poll()
@@ -218,16 +216,14 @@ class WeatherState:
     def update(self, key, value):
         self.state[key] = value
         
-    def get_current_data(self):
-        return pd.DataFrame(list(self.state.values())) \
-            .set_index('station')
+    def get_current_state(self):
+        return self.state
         
 weather_state = WeatherState()
 
 while True:
     msg = consumer.poll()
-    if msg.topic() == weather_topic:
-        weather_state.update(msg.key(), msg.value())
+    weather_state.update(msg.key(), msg.value())
 ```
 
 +++
@@ -248,13 +244,6 @@ weather_information.updateStateByKey(update_function)
 ## Kafka Streams
 
 ```python
-class UpdateState(BaseProcessor):
-    def initialise(self, name, context):
-        self.store = context.get_store('weather_store')
-    
-    def process(self, key, value):
-        self.store.update_weather(key.decode('ascii'), value)
-
 topology_builder \
     ... \
     .processor('weather', UpdateState, 'weather-event') \
