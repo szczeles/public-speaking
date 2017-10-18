@@ -1,10 +1,10 @@
-## Safer roads with kafka&python
+# Safer roads with kafka&python
 
 pyData Warsaw 2017
 
 ---
 
-## About me
+# About me
 
 <ul>
 <li class="fragment">Mariusz Strzelecki</li>
@@ -13,7 +13,7 @@ pyData Warsaw 2017
 </ul>
 
 Note:
- - data ecosystem engineer, not data scientists
+ - data ecosystem engineer, not data scientist
 
 ---?image=https://img00.deviantart.net/b90d/i/2009/314/9/f/welcome_to_accident_by_howardtj43147.jpg&size=cover
 
@@ -68,7 +68,7 @@ Note:
  - distributed log/journal
  - 2011
 
-+++?image=assets/images/kafka.png
++++?image=assets/images/kafka.png&size=cover
 
 Note:
  - topics/subjects
@@ -95,21 +95,49 @@ Note:
 
 # Frameworks
 
-- [confluent kafka client](https://github.com/confluentinc/confluent-kafka-python)
+- [Confluent Kafka Client](https://github.com/confluentinc/confluent-kafka-python)
 - [Spark Streaming](https://spark.apache.org/docs/2.2.0/streaming-kafka-0-10-integration.html)
 - [Winton Kafka Streams](https://github.com/wintoncode/winton-kafka-streams)
 
 +++
 
-# Confluent Kafka Client
+## Confluent Kafka Client
+
+```
+consumer = Consumer({'metadata.broker.list': 'localhost:9092'})
+consumer.subscribe([car_events_topic])
+while True:
+    msg = consumer.poll()
+    # msg.key(), msg.value()
+```
+
+Note:
+ - based on library written in C
 
 +++
 
-# Spark Streaming
+## Spark Streaming
+
+```
+spark = SparkSession.builder.getOrCreate()
+ssc = StreamingContext(spark.sparkContext, 1)
+inductive_loop_events = KafkaUtils.createDirectStream(
+   ssc, [car_events_topic], ...)
+inductive_loop_events.pprint()
+```
 
 +++
 
-# Winton Kafka Streams
+## Winton Kafka Streams
+
+```
+topology_builder. \
+    source('loop-event-json', [car_events_topic]). \
+    processor('loop-event', ReadJson, 'loop-event-json').
+    ...
+
+kafka_streams.KafkaStreams(topology_builder, kafka_config).start()
+```
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
