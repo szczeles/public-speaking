@@ -152,7 +152,7 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config) \
 <br/><br/><br/><br/><br/><br/><br/><br/>
 <h1 style="color: white">(double) windowing</h1>
 
-+++?image=assets/images/double_windowing.png
++++?image=assets/images/double_windowing.png&size=cover
 
 +++
 
