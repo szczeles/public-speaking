@@ -134,6 +134,10 @@ cars_stats = get_window(inductive_loop_events, 10) \
 
 cars_stats.pprint()
 ```
+@[1-2]
+@[3-4]
+@[6-8]
+@[10]
 
 +++
 
@@ -150,6 +154,8 @@ topology_builder. \
 kafka_streams.KafkaStreams(topology_builder, kafka_config)\
     .start()
 ```
+@[1-6]
+@[8]
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
