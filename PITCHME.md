@@ -169,7 +169,7 @@ Note:
 
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
-<h1 style="color: yellow">Joining two streamsa</h1>
+<h1 style="color: yellow">Joining two streams</h1>
 <br/><br/> <br/><br/> <br/><br/> <br/><br/>
 
 +++
@@ -201,8 +201,17 @@ Nie da się :-(
 
 ---
 
-# Thank you!
-## Questions?
+# Summary
+
+* TODO
+* TODO2
+
++++
+
+## Thank you! Questions?
+
+![dxc](assets/images/hiring.png)
+
 
 Note:
 - 
