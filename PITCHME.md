@@ -197,11 +197,13 @@ def get_window(length):
 get_window(long_window).join(get_window(short_window))
 ```
 
+Note:
+ - https://issues.apache.org/jira/browse/SPARK-18791 - strustured steraming do not have joins
 +++
 
 ## Kafka Streams
 
-```
+```python
 class ProcessLoopEvent(BaseProcessor):
     def initialise(self, name, context):
         self.context.schedule(short_window * 60)
@@ -217,14 +219,6 @@ class ProcessLoopEvent(BaseProcessor):
         self.datastore[-1].append(value)
 ```
 
-+++
-
-## Battle results
-
-|Challenge|Raw|Spark|Winton|
-|---------|---|-----|------|
-|Windowing|![BAD](http://www.iconninja.com/files/617/943/793/valid-up-positive-good-thumb-yes-ok-success-pro-accept-icon.png)|OK|OK|
-
 ---?image=assets/images/puzzle.jpg&size=cover
 
 <h1 style="padding-left: 60%">Global state</h1>
@@ -233,22 +227,52 @@ class ProcessLoopEvent(BaseProcessor):
 
 ## Raw client
 
-Nie da się :-(
+```python
+class WeatherState:
+    def __init__(self):
+        self.state = {}
+        
+    def update(self, key, value):
+        self.state[key] = value
+        
+    def get_current_data(self):
+        return pd.DataFrame(list(self.state.values())) \
+            .set_index('station')
+        
+weather_state = WeatherState()
+```
 
 +++
 
 ## Spark Streaming
 
-[TODO - pseudokod z join]
+```python
+def update_function(new_values, last_state):
+    if len(new_values) == 0:
+        return last_state
+    return new_values[0]
 
-Note:
- - https://issues.apache.org/jira/browse/SPARK-18791 - strustured steraming do not have joins
+weather_information.updateStateByKey(update_function)
+```
 
 +++
 
 ## Kafka Streams
 
-[TODO - pseudokod z join]
+```python
+class UpdateState(BaseProcessor):
+    def initialise(self, name, context):
+        self.store = context.get_store('weather_store')
+    
+    def process(self, key, value):
+        self.store.update_weather(key.decode('ascii'), value)
+
+topology_builder \
+    ... \
+    .processor('weather', UpdateState, 'weather-event') \
+    .processor('stats', CalculateStatsAndJoin, 'loops-windows')
+    .state_store('weather_store', WeatherStore, 'weather', 'stats')
+```
 
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
@@ -318,3 +342,11 @@ Spark:
 
 
 
+
++++
+
+## Battle results
+
+|Challenge|Raw|Spark|Winton|
+|---------|---|-----|------|
+|Windowing|![BAD](http://www.iconninja.com/files/617/943/793/valid-up-positive-good-thumb-yes-ok-success-pro-accept-icon.png)|OK|OK|
