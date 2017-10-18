@@ -155,7 +155,7 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config)\
     .start()
 ```
 @[1-6]
-@[8]
+@[8-9]
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
