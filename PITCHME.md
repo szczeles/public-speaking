@@ -103,7 +103,7 @@ Note:
 
 ## Confluent Kafka Client
 
-```
+```python
 consumer = Consumer({'metadata.broker.list': 'localhost:9092'})
 consumer.subscribe([car_events_topic])
 while True:
@@ -118,7 +118,7 @@ Note:
 
 ## Spark Streaming
 
-```
+```python
 spark = SparkSession.builder.getOrCreate()
 ssc = StreamingContext(spark.sparkContext, 1)
 inductive_loop_events = KafkaUtils.createDirectStream(
@@ -130,13 +130,15 @@ inductive_loop_events.pprint()
 
 ## Winton Kafka Streams
 
-```
+```python
 topology_builder. \
     source('loop-event-json', [car_events_topic]). \
     processor('loop-event', ReadJson, 'loop-event-json').
-    ...
+    processor('loops-windows', ProcessLoopEvent, 'loop-event'). \
+    processor('stats', CalculateStatsAndJoin, 'loops-windows')
 
-kafka_streams.KafkaStreams(topology_builder, kafka_config).start()
+kafka_streams.KafkaStreams(topology_builder, kafka_config)\
+    .start()
 ```
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
