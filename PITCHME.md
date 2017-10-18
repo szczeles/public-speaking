@@ -231,12 +231,12 @@ while True:
 ## Spark Streaming
 
 ```python
-def update_function(new_values, last_state):
+def get_newest(new_values, last_state):
     if len(new_values) == 0:
         return last_state
     return new_values[0]
 
-weather_information.updateStateByKey(update_function)
+weather_stream.updateStateByKey(get_newest)
 ```
 
 +++
@@ -245,8 +245,7 @@ weather_information.updateStateByKey(update_function)
 
 ```python
 topology_builder \
-    ... \
-    .processor('weather', UpdateState, 'weather-event') \
+    .processor('weather', UpdateWeather, 'weather-event') \
     .processor('stats', CalculateStatsAndJoin, 
                                       'loops-windows')
     .state_store('weather_store', WeatherStore, 
