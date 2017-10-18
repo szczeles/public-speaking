@@ -306,7 +306,7 @@ cars_stats_with_point_data.join(weather_state)
 - features support (like exactly-once delivery) |
 - performance is a key |
 
-Spark:
+Note:
  - https://issues.apache.org/jira/browse/SPARK-16534 - no kafka 0.10 support in DStreams
 
 ---
