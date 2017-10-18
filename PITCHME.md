@@ -106,9 +106,11 @@ Note:
 ```python
 consumer = Consumer({'metadata.broker.list': 'localhost:9092'})
 consumer.subscribe([car_events_topic])
+
 while True:
     msg = consumer.poll()
-    # msg.key(), msg.value()
+    if msg.topic() == car_events_topic:
+        process_data(msg.value())
 ```
 
 Note:
@@ -123,7 +125,12 @@ spark = SparkSession.builder.getOrCreate()
 ssc = StreamingContext(spark.sparkContext, 1)
 inductive_loop_events = KafkaUtils.createDirectStream(
    ssc, [car_events_topic], ...)
-inductive_loop_events.pprint()
+
+cars_stats = get_window(inductive_loop_events, 10) \
+  .join(get_window(inductive_loop_events, 1)) \
+  .map(...)
+
+cars_stats.pprint()
 ```
 
 +++
@@ -135,7 +142,8 @@ topology_builder. \
     source('loop-event-json', [car_events_topic]). \
     processor('loop-event', ReadJson, 'loop-event-json').
     processor('loops-windows', ProcessLoopEvent, 'loop-event'). \
-    processor('stats', CalculateStatsAndJoin, 'loops-windows')
+    processor('stats', CalculateStatsAndJoin, 'loops-windows'). \
+    processor('results', ApplyMLModel, 'stats')
 
 kafka_streams.KafkaStreams(topology_builder, kafka_config)\
     .start()
