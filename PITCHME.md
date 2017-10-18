@@ -104,7 +104,7 @@ Note:
 ## Confluent Kafka Client
 
 ```python
-consumer = Consumer({'metadata.broker.list': 'localhost:9092'})
+consumer = Consumer({'metadata.broker.list': ...})
 consumer.subscribe([car_events_topic])
 
 while True:
@@ -112,6 +112,8 @@ while True:
     if msg.topic() == car_events_topic:
         process_data(msg.value())
 ```
+@[1-2]
+@[4-7]
 
 Note:
  - based on library written in C
