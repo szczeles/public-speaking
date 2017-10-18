@@ -105,12 +105,11 @@ Note:
 
 ```python
 consumer = Consumer({'metadata.broker.list': ...})
-consumer.subscribe([car_events_topic])
+consumer.subscribe(['topic'])
 
 while True:
     msg = consumer.poll()
-    if msg.topic() == car_events_topic:
-        process_data(msg.value())
+    do_something_with(msg)
 ```
 @[1-2]
 @[4-7]
@@ -125,19 +124,12 @@ Note:
 ```python
 spark = SparkSession.builder.getOrCreate()
 ssc = StreamingContext(spark.sparkContext, 1)
-inductive_loop_events = KafkaUtils.createDirectStream(
-   ssc, [car_events_topic], ...)
+stream = KafkaUtils.createDirectStream(ssc, ['topic'], ...)
 
-cars_stats = get_window(inductive_loop_events, 10) \
-  .join(get_window(inductive_loop_events, 1)) \
-  .map(...)
-
-cars_stats.pprint()
+stream.window(10, 2).map(...).join(...).pprint()
 ```
-@[1-2]
-@[3-4]
-@[6-8]
-@[10]
+@[1-3]
+@[5]
 
 +++
 
@@ -145,17 +137,15 @@ cars_stats.pprint()
 
 ```python
 topology_builder \
-    .source('loop-event-json', [car_events_topic]) \
-    .processor('loop-event', ReadJson, 'loop-event-json') \
-    .processor('loops-windows', ProcessEvent, 'loop-event') \
-    .processor('stats', CalculateStats, 'loops-windows') \
-    .processor('results', ApplyMLModel, 'stats')
+    .source('raw_event', ['input_topic']) \
+    .processor('processed_event, Processor, 'raw_event') \
+    .sink('sink', 'output_topic', 'processed_event')
 
-kafka_streams.KafkaStreams(topology_builder, kafka_config)\
+kafka_streams.KafkaStreams(topology_builder, kafka_config) \
     .start()
 ```
-@[1-6]
-@[8-9]
+@[1-4]
+@[6-7]
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
