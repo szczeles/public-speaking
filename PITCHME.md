@@ -91,7 +91,7 @@ Note:
 
 +++
 
-# Frameworks frameworks
+# Frameworks
 
 - [confluent kafka client](https://github.com/confluentinc/confluent-kafka-python)
 - [Spark Streaming](https://spark.apache.org/docs/2.2.0/streaming-kafka-0-10-integration.html)
@@ -111,10 +111,10 @@ Note:
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
-<br/><br/><br/><br/><br/>
-<h1>(double) windowing</h1>
+<br/><br/><br/><br/><br/><br/><br/>
+<h1 style="color: white">(double) windowing</h1>
 
-+++?image=assets/image/double_windowing.png
++++?image=assets/images/double_windowing.png
 
 +++
 
@@ -142,9 +142,9 @@ Note:
 |---------|---|-----|------|
 |Windowing|![BAD](http://www.iconninja.com/files/617/943/793/valid-up-positive-good-thumb-yes-ok-success-pro-accept-icon.png)|OK|OK|
 
----?image=assets/images/puzzle.jpg
+---?image=assets/images/puzzle.jpg&size=cover
 
-<h1>Global state</h1>
+<h1 style="padding-left: 60%">Global state</h1>
 
 +++
 
@@ -169,7 +169,8 @@ Note:
 
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
-# Joining two streams
+<h1 style="color: yellow">Joining two streamsa</h1>
+<br/><br/> <br/><br/> <br/><br/> <br/><br/>
 
 +++
 
@@ -195,6 +196,8 @@ Nie da się :-(
 
 - Kafka security (authorization, encryption)
 - Model upgrade
+- HA
+- Performance
 
 ---
 
