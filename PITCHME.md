@@ -144,12 +144,12 @@ cars_stats.pprint()
 ## Winton Kafka Streams
 
 ```python
-topology_builder. \
-    source('loop-event-json', [car_events_topic]). \
-    processor('loop-event', ReadJson, 'loop-event-json').\
-    processor('loops-windows', ProcessEvent, 'loop-event'). \
-    processor('stats', CalculateStats, 'loops-windows'). \
-    processor('results', ApplyMLModel, 'stats')
+topology_builder \
+    .source('loop-event-json', [car_events_topic]) \
+    .processor('loop-event', ReadJson, 'loop-event-json') \
+    .processor('loops-windows', ProcessEvent, 'loop-event') \
+    .processor('stats', CalculateStats, 'loops-windows') \
+    .processor('results', ApplyMLModel, 'stats')
 
 kafka_streams.KafkaStreams(topology_builder, kafka_config)\
     .start()
