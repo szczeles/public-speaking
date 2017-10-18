@@ -280,7 +280,7 @@ topology_builder \
 
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
-<h1 style="color: red">Joining two streams</h1>
+<h1 style="color: red">Joining two<br />streams</h1>
 <br/><br/> <br/><br/> <br/><br/> <br/><br/>
 
 +++
