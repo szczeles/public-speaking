@@ -23,7 +23,6 @@ while True:
   }
   p.produce(topic, json.dumps(event), key=str(event['point_id'])) 
   time.sleep(random.uniform(0.0005, 0.0010))
-  #time.sleep(random.uniform(0.0002, 0.0004))
-  if random.randint(0, 100) == 0:
+  if random.randint(0, 1000) == 0:
     p.flush()
 
