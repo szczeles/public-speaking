@@ -144,12 +144,12 @@ cars_stats.pprint()
 ## Winton Kafka Streams
 
 ```python
-topology_builder. \
-    source('loop-event-json', [car_events_topic]). \
+(topology_builder.
+    source('loop-event-json', [car_events_topic]).
     processor('loop-event', ReadJson, 'loop-event-json').
-    processor('loops-windows', ProcessLoopEvent, 'loop-event'). \
-    processor('stats', CalculateStatsAndJoin, 'loops-windows'). \
-    processor('results', ApplyMLModel, 'stats')
+    processor('loops-windows', ProcessLoopEvent, 'loop-event').
+    processor('stats', CalculateStatsAndJoin, 'loops-windows').
+    processor('results', ApplyMLModel, 'stats'))
 
 kafka_streams.KafkaStreams(topology_builder, kafka_config)\
     .start()
@@ -159,7 +159,7 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config)\
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
-<br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 <h1 style="color: white">(double) windowing</h1>
 
 +++?image=assets/images/double_windowing.png
