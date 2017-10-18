@@ -29,9 +29,9 @@ Note:
 - road shape, surface quality, neighbourhood |
 - calendar: day of week, national holiday |
 
-+++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=cover
++++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
 
-+++?image=assets/images/loop-controller.jpg&size=contain
++++?image=assets/images/loop-controller.jpg&size=cover
 
 +++?image=assets/images/flanders.png&size=contain
 
@@ -79,25 +79,42 @@ Note:
 
 +++
 
-# Real-time approach challenges
+# Real-time challenges
 
-- induction loops events are atomic |
-- streams do not look joinable |
-- processing scalability |
-
-+++
-
-# Python kafka frameworks
-
-- ["raw" kafka client](https://github.com/confluentinc/confluent-kafka-python)
-- [Spark Streaming](https://spark.apache.org/docs/2.2.0/streaming-kafka-0-10-integration.html)
-- [Winton Kafka Streams](https://github.com/wintoncode/winton-kafka-streams)
+- real-time grouping induction loops events (windowing) |
+- handling global state of current weather |
+- joining two streams of events |
 
 ---
 
-# 1. Merging induction loops events
+# Kafka meets python
 
-[TODO - jakiś obrazek związany z mergem]
++++
+
+# Frameworks frameworks
+
+- [confluent kafka client](https://github.com/confluentinc/confluent-kafka-python)
+- [Spark Streaming](https://spark.apache.org/docs/2.2.0/streaming-kafka-0-10-integration.html)
+- [Winton Kafka Streams](https://github.com/wintoncode/winton-kafka-streams)
+
++++
+
+# Confluent Kafka Client
+
++++
+
+# Spark Streaming
+
++++
+
+# Winton Kafka Streams
+
+---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
+
+<br/><br/><br/><br/><br/>
+<h1>(double) windowing</h1>
+
++++?image=assets/image/double_windowing.png
 
 +++
 
@@ -125,9 +142,9 @@ Note:
 |---------|---|-----|------|
 |Windowing|![BAD](http://www.iconninja.com/files/617/943/793/valid-up-positive-good-thumb-yes-ok-success-pro-accept-icon.png)|OK|OK|
 
----
+---?image=assets/images/puzzle.jpg
 
-# 2. Streams join
+<h1>Global state</h1>
 
 +++
 
@@ -150,9 +167,9 @@ Note:
 
 [TODO - pseudokod z join]
 
----
+---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
-# 3. Scalability
+# Joining two streams
 
 +++
 
