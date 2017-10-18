@@ -287,19 +287,30 @@ topology_builder \
 
 ## Raw client
 
-Nie da się :-(
+```python
+# pandas local join only
+
+joined_windows.set_index('nearest_weather_station') \
+    .join(weather_state.get_current_data()) \
+    .set_index('point_id')
+```
 
 +++
 
 ## Spark Streaming
 
-[TODO - pseudokod z join]
+```python
+cars_stats_with_point_data.join(weather_state)
+```
 
 +++
 
 ## Kafka Streams
 
-[TODO - pseudokod z join]
+```python
+# the same issue like raw client
+# local pandas join possible
+```
 
 ---
 
@@ -307,7 +318,7 @@ Nie da się :-(
 
 - Kafka security (authorization, encryption)
 - Model upgrade
-- HA
+- High availability
 - Performance
 
 ---
