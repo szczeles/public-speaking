@@ -159,19 +159,19 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config) \
 ## Raw client
 
 ```python
-class LoopEventsWindows:
-    def loop_event(self, event):
-        self.deque.append(event)
+def generate_windows(): # every minute
+    short_window = data[
+        (ts_field >= current_time - one_minute) &
+        (ts_field <= current_time)
+    ]
+    long_window = data[
+        (ts_field >= current_time - ten_minutes) &
+        (ts_field <= current_time)
+    ]
 
-    def get_windows(self):
-        current_time = time.time()
-        data = pd.DataFrame(list(self.deque))
-        ts_field = data[self.timestamp_field]
-        return { 
-            str(window): data[
-                (ts_field >= current_time - window) & 
-                (ts_field <= current_time)
-            ] for window in self.windows }
+while True:
+    msg = consumer.poll()
+    append_message(msg.value())
 ```
 
 +++
@@ -179,12 +179,9 @@ class LoopEventsWindows:
 ## Spark Streaming
 
 ```python
-def get_window(length):
-    return inductive_loop_events.window(length * 60, 60) \
-        .map(map_record).reduceByKey(get_stats) \
-        .map(lambda r: map_stats(r, str(length)))
-
-get_window(long_window).join(get_window(short_window))
+short_window = input_stream.window(one_minute, one_minute)
+long_window = input_stream.window(ten_minutes, one_minute)
+short_window.join(long_window)
 ```
 
 Note:
@@ -196,17 +193,16 @@ Note:
 ```python
 class ProcessLoopEvent(BaseProcessor):
     def initialise(self, name, context):
-        self.context.schedule(short_window * 60)
+        self.context.schedule(one_minute)
         
-    def punctuate(self, timestamp):
-        short_window_data = self.datastore[-1]
-        long_window_data = join_last_10_windows()
-        self.context.forward(None, 
-            json.dumps((short_window_data, long_window_data)))
-        self.datastore.append([])
+    def punctuate(self, timestamp): # called every 1 minute
+        short_window_data = self.last_minute_events()
+        long_window_data = self.last_ten_minutes_events()
+        combined = (short_window_data, long_window_data)
+        self.context.forward(None, json.dumps(combined))
     
     def process(self, key, value):
-        self.datastore[-1].append(value)
+        append_message(value)
 ```
 
 ---?image=assets/images/puzzle.jpg&size=cover
