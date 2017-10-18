@@ -240,6 +240,11 @@ class WeatherState:
             .set_index('station')
         
 weather_state = WeatherState()
+
+while True:
+    msg = consumer.poll()
+    if msg.topic() == weather_topic:
+        weather_state.update(msg.key(), msg.value())
 ```
 
 +++
