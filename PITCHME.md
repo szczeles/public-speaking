@@ -64,16 +64,18 @@ Note:
 
 +++?image=https://kafka.apache.org/images/logo.png&size=contain
 
-[TODO] trochę więcej o kafce -> producer -> topics(part1, part2, 3) -> consumer
-
 Note:
  - distributed log/journal
  - 2011
+
++++?image=assets/images/kafka.png
+
+Note:
  - topics/subjects
  - multiple producers
  - partitions paradighm - multiple consumers
  - from 0.11 (newest release) transactions and exactly-once delivery - so can be used as enterprise message bus
- - really good support
+ - good community support
 
 +++?image=assets/images/model_building_4.png&size=cover
 
