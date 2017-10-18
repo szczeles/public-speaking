@@ -138,7 +138,7 @@ stream.window(10, 2).map(...).join(...).pprint()
 ```python
 topology_builder \
     .source('raw_event', ['input_topic']) \
-    .processor('processed_event, Processor, 'raw_event') \
+    .processor('processed_event', Processor, 'raw_event') \
     .sink('sink', 'output_topic', 'processed_event')
 
 kafka_streams.KafkaStreams(topology_builder, kafka_config) \
