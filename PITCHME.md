@@ -168,20 +168,54 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config)\
 
 ## Raw client
 
+```python
+class LoopEventsWindows:
+    def loop_event(self, event):
+        self.deque.append(event)
 
-[TODO - pseudokod z poll()]
+    def get_windows(self):
+        current_time = time.time()
+        data = pd.DataFrame(list(self.deque))
+        ts_field = data[self.timestamp_field]
+        return { 
+            str(window): data[
+                (ts_field >= current_time - window) & 
+                (ts_field <= current_time)
+            ] for window in self.windows }
+```
 
 +++
 
 ## Spark Streaming
 
-[TODO - pseudokod z windowingiem]
+```python
+def get_window(length):
+    return inductive_loop_events.window(length * 60, 60) \
+        .map(map_record).reduceByKey(get_stats) \
+        .map(lambda r: map_stats(r, str(length)))
+
+get_window(long_window).join(get_window(short_window))
+```
 
 +++
 
 ## Kafka Streams
 
-[TODO - pseudokod z windowingiem]
+```
+class ProcessLoopEvent(BaseProcessor):
+    def initialise(self, name, context):
+        self.context.schedule(short_window * 60)
+        
+    def punctuate(self, timestamp):
+        short_window_data = self.datastore[-1]
+        long_window_data = join_last_10_windows()
+        self.context.forward(None, 
+            json.dumps((short_window_data, long_window_data)))
+        self.datastore.append([])
+    
+    def process(self, key, value):
+        self.datastore[-1].append(value)
+```
 
 +++
 
