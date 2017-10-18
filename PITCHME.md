@@ -288,12 +288,22 @@ cars_stats_with_point_data.join(weather_state)
 
 ---
 
+# Frameworks comparison
+
+1. Spark Streaming
+2. Winton Kafka Streams
+3. Raw client
+
+![github logo](https://image.flaticon.com/icons/png/128/25/25231.png) **szczeles/public-speaking/pydata2017**
+
+---
+
 ## Other challenges
 
-- Kafka security (authorization, encryption)
-- Model upgrade
-- High availability
-- Performance
+- Kafka security (authorization, encryption) |
+- Updating model definition |
+- High availability |
+- Performance |
 
 ---
 
