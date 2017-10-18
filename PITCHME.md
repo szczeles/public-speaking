@@ -272,8 +272,10 @@ class UpdateState(BaseProcessor):
 topology_builder \
     ... \
     .processor('weather', UpdateState, 'weather-event') \
-    .processor('stats', CalculateStatsAndJoin, 'loops-windows')
-    .state_store('weather_store', WeatherStore, 'weather', 'stats')
+    .processor('stats', CalculateStatsAndJoin, 
+                                      'loops-windows')
+    .state_store('weather_store', WeatherStore, 'weather', 
+                                      'stats')
 ```
 
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
