@@ -168,6 +168,7 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config)\
 
 ## Raw client
 
+
 [TODO - pseudokod z poll()]
 
 +++
