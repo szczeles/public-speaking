@@ -281,7 +281,7 @@ topology_builder \
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
 <h1 style="color: white">Joining<br />streams</h1>
-<br/><br/> <br/><br/> <br/><br/> <br/><br/>
+<br/><br/> <br/><br/> 
 
 +++
 
