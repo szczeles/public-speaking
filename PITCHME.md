@@ -9,7 +9,7 @@ pyData Warsaw 2017
 <ul>
 <li class="fragment">Mariusz Strzelecki</li>
 <li class="fragment"><img src="http://assets1.dxc.technology/newsroom/images/dxc_logo_hz_blk_rgb_300.png", width="40%" /></li>
-<li class="fragment">stackoverflow tags **pyspark** and **spark**</li>
+<li class="fragment">**pyspark** and **spark** stackoverflow tags</li>
 </ul>
 
 Note:
@@ -19,14 +19,14 @@ Note:
 
 +++
 
-## Read safety "features"
+## Road "unsafety" features
 
 - weather conditions (fog, wind, rain, snow, sun) |
 - traffic: |
   - road occupancy |
   - vehicles speed (compared to allowed speed) |
   - gaps between vehicles and their length |
-- road shape, surface quality, neighbourhood |
+- road shape, surface quality |
 - calendar: day of week, national holiday |
 
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
@@ -50,8 +50,6 @@ Note:
 +++?image=assets/images/model_building_2.png&size=cover
 
 +++?image=assets/images/model_building_3.png&size=cover
-
-+++?image=https://i.imgur.com/KkUB0dL.jpg&size=contain
 
 ---
 
@@ -83,7 +81,7 @@ Note:
 
 # Real-time challenges
 
-- real-time grouping induction loops events (windowing) |
+- real-time grouping inductive loops events (windowing) |
 - handling global state of current weather |
 - joining two streams of events |
 
@@ -313,9 +311,12 @@ Note:
 
 # Summary
 
+- streaming is challenging |
 - real-time vs. micro-batching | 
 - no silver bullet in pure python |
 
+Note:
+ - to implement and maintain
 +++
 
 ## Thank you! Questions?
