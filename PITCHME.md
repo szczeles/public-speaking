@@ -332,9 +332,7 @@ Note:
 
 +++
 
-## Thank you! Questions?
-
-![dxc](assets/images/hiring.png)
+# Thank you! Questions?
 
 
 Note:
