@@ -40,7 +40,6 @@ traffic:
 
 calendar: day of week, national holiday
 
-
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
 
 +++?image=assets/images/loop-controller.jpg&size=cover
@@ -183,8 +182,11 @@ while True:
 ## Spark Streaming
 
 ```python
-short_window = stats_of(input_stream.window(one_minute, one_minute))
-long_window = stats_of(input_stream.window(ten_minutes, one_minute))
+short_window = stats_of(
+    input_stream.window(one_minute, one_minute))
+long_window = stats_of(
+    input_stream.window(ten_minutes, one_minute))
+
 short_window.join(long_window)
 ```
 
@@ -192,7 +194,7 @@ Note:
  - https://issues.apache.org/jira/browse/SPARK-18791 - strustured steraming do not have joins
 +++
 
-## Kafka Streams
+## Winton Kafka Streams
 
 ```python
 class ProcessLoopEvent(BaseProcessor):
@@ -247,7 +249,7 @@ weather_stream.updateStateByKey(get_newest)
 
 +++
 
-## Kafka Streams
+## Winton Kafka Streams
 
 ```python
 topology_builder \
@@ -285,7 +287,7 @@ cars_stats_with_point_data.join(weather_state)
 
 +++
 
-## Kafka Streams
+## Winton Kafka Streams
 
 ```python
 # the same issue like raw client
