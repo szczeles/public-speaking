@@ -17,17 +17,29 @@ Note:
 
 ---?image=https://img00.deviantart.net/b90d/i/2009/314/9/f/welcome_to_accident_by_howardtj43147.jpg&size=cover
 
+Note:
+- 1.3 mln dead
+- 20 mln wounded
+
 +++
 
 ## Road "unsafety" features
 
-- weather conditions (fog, wind, rain, snow, sun) |
-- traffic: |
+- weather conditions |
+- traffic |
+- road shape, surface quality |
+- calendar |
+
+Note:
+weather: for, wind, rain, show, sun
+
+traffic:
   - road occupancy |
   - vehicles speed (compared to allowed speed) |
   - gaps between vehicles and their length |
-- road shape, surface quality |
-- calendar: day of week, national holiday |
+
+calendar: day of week, national holiday |
+
 
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
 
@@ -88,10 +100,6 @@ Note:
 ---
 
 # Kafka meets python
-
-+++
-
-# Frameworks
 
 - [Confluent Kafka Client](https://github.com/confluentinc/confluent-kafka-python)
 - [Spark Streaming](https://spark.apache.org/docs/2.2.0/streaming-kafka-0-10-integration.html)
@@ -175,8 +183,8 @@ while True:
 ## Spark Streaming
 
 ```python
-short_window = input_stream.window(one_minute, one_minute)
-long_window = input_stream.window(ten_minutes, one_minute)
+short_window = stats_of(input_stream.window(one_minute, one_minute))
+long_window = stats_of(input_stream.window(ten_minutes, one_minute))
 short_window.join(long_window)
 ```
 
@@ -298,25 +306,28 @@ cars_stats_with_point_data.join(weather_state)
 
 ## Other challenges
 
-- kafka security (authorization, encryption) |
-- updating model definition |
 - high availability |
-- features support (like exactly-once delivery) |
 - performance is a key |
+- updating model definition |
+- kafka security (authorization, encryption) |
+- features support (like exactly-once delivery) |
 
 Note:
  - https://issues.apache.org/jira/browse/SPARK-16534 - no kafka 0.10 support in DStreams
 
 ---
 
-# Summary
+# Takeaways
 
 - streaming is challenging |
 - real-time vs. micro-batching | 
 - no silver bullet in pure python |
 
 Note:
+ - throw yourself into history
  - to implement and maintain
+ - streamparse with storm
+
 +++
 
 ## Thank you! Questions?
