@@ -34,11 +34,11 @@ Note:
 weather: for, wind, rain, show, sun
 
 traffic:
-  - road occupancy |
-  - vehicles speed (compared to allowed speed) |
-  - gaps between vehicles and their length |
+  - road occupancy
+  - vehicles speed (compared to allowed speed)
+  - gaps between vehicles and their length
 
-calendar: day of week, national holiday |
+calendar: day of week, national holiday
 
 
 +++?image=https://ops.fhwa.dot.gov/freewaymgmt/publications/frwy_mgmt_handbook/images/fig15-1.jpg&size=contain
