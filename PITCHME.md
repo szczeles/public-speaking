@@ -128,7 +128,7 @@ Note:
 
 ```python
 spark = SparkSession.builder.getOrCreate()
-ssc = StreamingContext(spark.sparkContext, 1)
+ssc = StreamingContext(spark.sparkContext, 60)
 stream = KafkaUtils.createDirectStream(ssc, ['topic'], ...)
 
 stream.window(10, 2).map(...).join(...).pprint()
@@ -182,12 +182,10 @@ while True:
 ## Spark Streaming
 
 ```python
-short_window = stats_of(
-    input_stream.window(one_minute, one_minute))
-long_window = stats_of(
-    input_stream.window(ten_minutes, one_minute))
+short_window = input_stream.window(one_minute, one_minute)
+long_window = input_stream.window(ten_minutes, one_minute)
 
-short_window.join(long_window)
+stats_of(short_window).join(stats_of(long_window))
 ```
 
 Note:
@@ -310,7 +308,7 @@ cars_stats_with_point_data.join(weather_state)
 
 - high availability |
 - performance is a key |
-- updating model definition |
+- late data |
 - kafka security (authorization, encryption) |
 - features support (like exactly-once delivery) |
 
@@ -326,9 +324,9 @@ Note:
 - no silver bullet in pure python |
 
 Note:
- - throw yourself into history
- - to implement and maintain
- - streamparse with storm
+- throw yourself into history
+- great potential
+- streamparse with storm
 
 +++
 
