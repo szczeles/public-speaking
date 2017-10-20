@@ -19,7 +19,7 @@ Note:
 
 Note:
 - 1.3 mln dead
-- 20 mln wounded
+- 20 mln injured
 
 +++
 
@@ -31,7 +31,7 @@ Note:
 - calendar |
 
 Note:
-weather: for, wind, rain, show, sun
+weather: fog, wind, rain, snow, ice, sun
 
 traffic:
   - road occupancy
