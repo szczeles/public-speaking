@@ -55,8 +55,13 @@ calendar: day of week, national holiday
 - traffic statistics (average speed, average gap, min gap, number of cars) on: |
    - 1-minute window |
    - 10-minutes window |
-- weather |
+- weather: rain, snow |
 - road shape and condition |
+
+Note:
+- treat model as black box
+- 12 features
+- standard or neural networks
 
 +++?image=assets/images/model_building_2.png&size=cover
 
@@ -151,6 +156,9 @@ kafka_streams.KafkaStreams(topology_builder, kafka_config) \
 ```
 @[1-4]
 @[6-7]
+
+Note:
+python 3.6
 
 ---?image=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Two_Windows_Aarhus.jpg/1280px-Two_Windows_Aarhus.jpg&size=cover
 
@@ -257,6 +265,9 @@ topology_builder \
     .state_store('weather_store', WeatherStore, 
                                       'weather', 'stats')
 ```
+
+Note:
+persistent
 
 ---?image=http://i.imgur.com/FP5GKOK.jpg&size=cover
 
