@@ -1,4 +1,4 @@
-# Czym nie jest Apache Kafka?
+# Czym nie jest Apache&nbsp;Kafka?
 
 <img src="http://day.torun.jug.pl/wp-content/uploads/2017/03/jug5d_2.png" width="20%" />
 
