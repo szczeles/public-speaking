@@ -1,5 +1,9 @@
 # Presentations created in  [GitPitch](https://gitpitch.com/) 
 
+### (EN) [Big Data Test Summit Warsaw 2017](http://bigdatatechwarsaw.eu/): One Jupyter to rule them all!
+
+- [slides](https://github.com/szczeles/public-speaking/raw/master/pre-gitpich/One%20Jupyter%20to%20rule%20them%20all.pdf)
+
 ### (PL) [JDD2017](https://jdd.org.pl/): Apache Spark, czyli jak wycisnąć z JVM'a więcej niż fabryka dała
 
 - [slides](https://gitpitch.com/szczeles/public-speaking/jdd2017), 
