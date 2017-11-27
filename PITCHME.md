@@ -27,9 +27,30 @@ Mariusz Strzelecki
 - przesuwanie ciężkich zadań "w tło" |
 - Internet Of Things |
 
----?image=http://ddarchitekci.pl/www/wp-content/uploads/blueprint-964629.jpg&size=cover
-
-
 Note:
 gry multiplayer
 reagowanie na zmiany cen akcji
+
+---?image=http://ddarchitekci.pl/www/wp-content/uploads/blueprint-964629.jpg&size=cover
+
+---
+
+# Założenia
+
+- szybko
+- bezpiecznie
+- proste API
+
+---?image=assets/images/impl01.png&size=auto
+
+---?image=assets/images/impl02.png&size=auto
+
+---?image=assets/images/impl03.png&size=auto
+
+---?image=assets/images/impl04.png&size=auto
+
+---?image=assets/images/impl05.png&size=auto
+
+---?image=assets/images/impl06.png&size=auto
+
+
