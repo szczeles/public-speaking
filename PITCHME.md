@@ -10,10 +10,10 @@ Mariusz Strzelecki
 
 # Publish-subscribe
 
----?image=assets/images/story01.png
+---?image=assets/images/story01.png&size=auto
 
----?image=assets/images/story02.png
+---?image=assets/images/story02.png&size=auto
 
----?image=assets/images/story03.png
+---?image=assets/images/story03.png&size=auto
 
 
