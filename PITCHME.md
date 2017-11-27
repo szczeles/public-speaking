@@ -53,4 +53,11 @@ reagowanie na zmiany cen akcji
 
 ---?image=assets/images/impl06.png&size=auto
 
+--- 
 
+# Kafka
+
+- nie cachuje danych |
+- nie przechowuje konfigutacji |
+- obsługuje żądania "w swoim czasie" |
+- jest przewidywalna |
