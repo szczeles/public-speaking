@@ -25,7 +25,7 @@ Mariusz Strzelecki
 - asynchroniczna komunikacja między mikrousługami |
 - informowanie o zmianach |
 - przesuwanie ciężkich zadań "w tło" |
-- **Internet Of Things** |
+- Internet Of Things |
 
 ---?image=http://ddarchitekci.pl/www/wp-content/uploads/blueprint-964629.jpg&size=cover
 
