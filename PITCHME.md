@@ -53,6 +53,52 @@ reagowanie na zmiany cen akcji
 
 ---?image=assets/images/impl06.png&size=auto
 
+---
+
+# Wysoka dostępność (HA)
+
+- producenci ✓
+- broker ☹
+- konsumenci ☹
+
+---?image=assets/images/impl07.png&size=auto
+
+---?image=assets/images/impl08.png&size=auto
+
+---?image=assets/images/impl09.png&size=auto
+
+---
+
+# Wysoka dostępność (HA)
+
+- producenci ✓
+- brokerzy ✓
+- konsumenci ☹
+
+---?image=assets/images/impl10.png&size=auto
+
+---?image=assets/images/impl11.png&size=auto
+
+---?image=assets/images/impl12.png&size=auto
+
+---?image=assets/images/impl13.png&size=auto
+
+---
+
+# Wysoka dostępność (HA)
+
+- producenci ✓
+- brokerzy ✓
+- konsumenci ✓
+
+---
+
+Upraszczamy API
+
+---
+
+
+
 --- 
 
 # Kafka
