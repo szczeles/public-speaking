@@ -169,10 +169,18 @@ rozkładanie obciążenia
 
 - brak wsparcia dla ponowień po stronie konsumentów |
 - nie ma możliwości filtrowania wiadomości |
+- brak komunikacji push do konsumentów |
+- zalecane użycie dedykowanych maszyn |
 
 ---
 
 ## Podsumowanie
+
+- świetna szyna danych |
+- łatwe utrzymanie, prosty monitoring |
+
+Note:
+skalowalność, bezpieczeństwo danych, niezawodność, wysoka wydajność
 
 ---
 
