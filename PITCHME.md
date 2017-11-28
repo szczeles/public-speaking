@@ -100,6 +100,8 @@ rozkładanie obciążenia
 
 ---?image=assets/images/impl14.png&size=auto
 
+---
+
 ## "Poproszę wiadomość nr 9283723"
 
 ---?image=assets/images/impl15.png&size=auto
