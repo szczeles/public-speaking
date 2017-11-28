@@ -127,8 +127,8 @@ rozkładanie obciążenia
 
 ## Gwaracje kolejności
 
-- lider vs. replika
-- w obrębie partycji
+- tylko w obrębie partycjia |
+- lider vs. replika |
 
 ---
 
@@ -148,8 +148,34 @@ rozkładanie obciążenia
 
 ---
 
-## Bezpieczeństwo
+## Exactly-once
 
-auth & encryption
+---?image=assets/images/exactlyonce01.png&size=auto
+
+---?image=assets/images/exactlyonce02.png&size=auto
 
 ---
+
+## Bezpieczeństwo
+
+- dane są przechowywane w sposób jawny |
+- TLS do szyfrowania ruchu i uwierzytelniania brokera |
+- TLS lub Kerberos (SASL) do uwierzytelnie klientów |
+- autoryzacja dostępu do topików i grup konsumentów |
+
+---
+
+## Wady
+
+- brak wsparcia dla ponowień po stronie konsumentów |
+- nie ma możliwości filtrowania wiadomości |
+
+---
+
+## Podsumowanie
+
+---
+
+# Dzięki!
+
+## Pytania?
