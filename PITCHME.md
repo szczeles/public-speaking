@@ -55,7 +55,7 @@ reagowanie na zmiany cen akcji
 
 ---
 
-# Wysoka dostępność (HA)
+## Wysoka dostępność (HA)
 
 - producenci ✓
 - broker ☹
@@ -69,13 +69,16 @@ reagowanie na zmiany cen akcji
 
 ---
 
-# Wysoka dostępność (HA)
+## Wysoka dostępność (HA)
 
 - producenci ✓
 - brokerzy ✓
 - konsumenci ☹
 
 ---?image=assets/images/impl10.png&size=auto
+
+Note:
+rozkładanie obciążenia
 
 ---?image=assets/images/impl11.png&size=auto
 
@@ -85,7 +88,7 @@ reagowanie na zmiany cen akcji
 
 ---
 
-# Wysoka dostępność (HA)
+## Wysoka dostępność (HA)
 
 - producenci ✓
 - brokerzy ✓
@@ -93,13 +96,11 @@ reagowanie na zmiany cen akcji
 
 ---
 
-Upraszczamy API
+## Dyski nie są nieskończone...
+
+segmenty
 
 ---
-
-
-
---- 
 
 # Kafka
 
@@ -107,3 +108,15 @@ Upraszczamy API
 - nie przechowuje konfigutacji |
 - obsługuje żądania "w swoim czasie" |
 - jest przewidywalna |
+
+---
+
+## Bezpieczeństwo
+
+auth & encryption
+
+---
+
+## Gwarancje dostarczenia wiadomości
+
+![hard problems](assets/images/hardproblems.png)
