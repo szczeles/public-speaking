@@ -113,9 +113,9 @@ rozkładanie obciążenia
 # Kafka
 
 - nie cachuje danych |
-- nie przechowuje konfigutacji |
+- nie przechowuje konfiguracji |
 - obsługuje żądania "w swoim czasie" |
-- jest przewidywalna |
+- nie tylko usuwa, ale też kompaktuje dane |
 
 ---
 
@@ -125,9 +125,9 @@ rozkładanie obciążenia
 
 ---
 
-## Gwaracje kolejności
+## Kolejność wiadomości
 
-- tylko w obrębie partycjia |
+- tylko w obrębie partycji |
 - lider vs. replika |
 
 ---
