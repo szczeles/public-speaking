@@ -159,9 +159,9 @@ rozkładanie obciążenia
 ## Bezpieczeństwo
 
 - dane są przechowywane w sposób jawny |
-- TLS do szyfrowania ruchu i uwierzytelniania brokera |
-- TLS lub Kerberos (SASL) do uwierzytelnie klientów |
-- autoryzacja dostępu do topików i grup konsumentów |
+- TLS szyfruje ruch i uwierzytelnia brokerów |
+- TLS lub Kerberos (SASL) uwierzytelniają klientów |
+- autoryzacja dostępu (do topików i grup konsumentów) |
 
 ---
 
