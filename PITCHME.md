@@ -119,12 +119,37 @@ rozkładanie obciążenia
 
 ---
 
+## Gwarancje dostarczenia wiadomości
+
+![hard problems](assets/images/hardproblems.png)
+
+---
+
+## Gwaracje kolejności
+
+- lider vs. replika
+- w obrębie partycji
+
+---
+
+## At-least-once
+
+---?image=assets/images/atleastonce01.png&size=auto
+
+---?image=assets/images/atleastonce02.png&size=auto
+
+---
+
+## At-most-once
+
+---?image=assets/images/atmostonce01.png&size=auto
+
+---?image=assets/images/atmostonce02.png&size=auto
+
+---
+
 ## Bezpieczeństwo
 
 auth & encryption
 
 ---
-
-## Gwarancje dostarczenia wiadomości
-
-![hard problems](assets/images/hardproblems.png)
