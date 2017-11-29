@@ -41,17 +41,17 @@ reagowanie na zmiany cen akcji
 - bezpiecznie
 - proste API
 
----?image=assets/images/impl01.png&size=auto
+---?image=assets/images/impl01.png&size=contain
 
----?image=assets/images/impl02.png&size=auto
+---?image=assets/images/impl02.png&size=contain
 
----?image=assets/images/impl03.png&size=auto
+---?image=assets/images/impl03.png&size=contain
 
----?image=assets/images/impl04.png&size=auto
+---?image=assets/images/impl04.png&size=contain
 
----?image=assets/images/impl05.png&size=auto
+---?image=assets/images/impl05.png&size=contain
 
----?image=assets/images/impl06.png&size=auto
+---?image=assets/images/impl06.png&size=contain
 
 ---
 
