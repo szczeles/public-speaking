@@ -178,7 +178,7 @@ rozkładanie obciążenia
 
 ## O Kafce słów kilka
 
-- proste założenia -> genialny efekt |
+- proste założenia → genialny efekt |
 - wysoka skalowalność |
 - pasuje do niemal każdego zastosowania |
 
