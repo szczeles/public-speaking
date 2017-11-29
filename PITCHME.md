@@ -176,8 +176,11 @@ rozkładanie obciążenia
 
 ## Podsumowanie
 
-- świetna szyna danych |
-- łatwe utrzymanie, prosty monitoring |
+### O Kafce słów kilka
+
+- proste założenia -> genialny efekt |
+- wysoka skalowalność |
+- pasuje do niemal każdego zastosowania |
 
 Note:
 skalowalność, bezpieczeństwo danych, niezawodność, wysoka wydajność
