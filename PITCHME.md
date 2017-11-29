@@ -187,7 +187,7 @@ skalowalność, bezpieczeństwo danych, niezawodność, wysoka wydajność
 
 ---
 
-# Jak zacząć?
+## Jak zacząć?
 
 Docker: `spotify/kafka`
 
