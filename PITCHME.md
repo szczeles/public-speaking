@@ -10,13 +10,13 @@ Mariusz Strzelecki
 
 # Publish-subscribe
 
----?image=assets/images/story01.png&size=auto
+---?image=assets/images/story01.png&size=contain
 
----?image=assets/images/story02.png&size=auto
+---?image=assets/images/story02.png&size=contain
 
----?image=assets/images/story03.png&size=auto
+---?image=assets/images/story03.png&size=contain
 
----?image=assets/images/story04.png&size=auto
+---?image=assets/images/story04.png&size=contain
 
 ---
 
@@ -61,11 +61,11 @@ reagowanie na zmiany cen akcji
 - broker ☹
 - konsumenci ☹
 
----?image=assets/images/impl07.png&size=auto
+---?image=assets/images/impl07.png&size=contain
 
----?image=assets/images/impl08.png&size=auto
+---?image=assets/images/impl08.png&size=contain
 
----?image=assets/images/impl09.png&size=auto
+---?image=assets/images/impl09.png&size=contain
 
 ---
 
@@ -75,16 +75,16 @@ reagowanie na zmiany cen akcji
 - brokerzy ✓
 - konsumenci ☹
 
----?image=assets/images/impl10.png&size=auto
+---?image=assets/images/impl10.png&size=contain
 
 Note:
 rozkładanie obciążenia
 
----?image=assets/images/impl11.png&size=auto
+---?image=assets/images/impl11.png&size=contain
 
----?image=assets/images/impl12.png&size=auto
+---?image=assets/images/impl12.png&size=contain
 
----?image=assets/images/impl13.png&size=auto
+---?image=assets/images/impl13.png&size=contain
 
 ---
 
@@ -98,13 +98,13 @@ rozkładanie obciążenia
 
 ## Dyski nie są nieskończone...
 
----?image=assets/images/impl14.png&size=auto
+---?image=assets/images/impl14.png&size=contain
 
 ---
 
 ## "Poproszę wiadomość nr 9283723"
 
----?image=assets/images/impl15.png&size=auto
+---?image=assets/images/impl15.png&size=contain
 
 ---?image=https://kafka.apache.org/images/logo.png&size=contain
 
@@ -134,25 +134,25 @@ rozkładanie obciążenia
 
 ## At-least-once
 
----?image=assets/images/atleastonce01.png&size=auto
+---?image=assets/images/atleastonce01.png&size=contain
 
----?image=assets/images/atleastonce02.png&size=auto
+---?image=assets/images/atleastonce02.png&size=contain
 
 ---
 
 ## At-most-once
 
----?image=assets/images/atmostonce01.png&size=auto
+---?image=assets/images/atmostonce01.png&size=contain
 
----?image=assets/images/atmostonce02.png&size=auto
+---?image=assets/images/atmostonce02.png&size=contain
 
 ---
 
 ## Exactly-once
 
----?image=assets/images/exactlyonce01.png&size=auto
+---?image=assets/images/exactlyonce01.png&size=contain
 
----?image=assets/images/exactlyonce02.png&size=auto
+---?image=assets/images/exactlyonce02.png&size=contain
 
 ---
 
