@@ -187,6 +187,14 @@ skalowalność, bezpieczeństwo danych, niezawodność, wysoka wydajność
 
 ---
 
+# Jak zacząć?
+
+Docker: `spotify/kafka`
+
+Klasycznie: [confluent.io/download](confluent.io/download)
+
+---
+
 # Dzięki!
 
 ## Pytania?
