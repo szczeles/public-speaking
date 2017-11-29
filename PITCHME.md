@@ -174,9 +174,9 @@ rozkładanie obciążenia
 
 ---
 
-## Podsumowanie
+# Podsumowanie
 
-### O Kafce słów kilka
+## O Kafce słów kilka
 
 - proste założenia -> genialny efekt |
 - wysoka skalowalność |
