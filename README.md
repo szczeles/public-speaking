@@ -22,7 +22,7 @@
 - [notebooks](https://github.com/szczeles/public-speaking/tree/pydata2017/notebooks)
 - [data generators](https://github.com/szczeles/public-speaking/tree/pydata2017/generator)
 
-### (PL) [Toruń JUG](https://www.meetup.com/Torun-JUG/): Czym nie jest Apache Kafka?
+### (PL) [Toruń JUG](https://www.meetup.com/Torun-JUG/): Czym nie jest Apache Kafka? (2017-11-29)
 
 - [slides](https://gitpitch.com/szczeles/public-speaking/torunjug2017), 
 - [source](https://github.com/szczeles/public-speaking/tree/torunjug2017)
