@@ -1,6 +1,6 @@
 # Public speaking
 
-### (PL) [ATM2017](https://allegro.tech/meeting/): Offline nie gryzie (2016-09-07)
+### (PL) [Allegro Tech Meeting 2016](https://allegro.tech/meeting/): Offline nie gryzie (2016-09-07)
 
 - [video](https://www.youtube.com/watch?v=apIOap6DsCA)
 
