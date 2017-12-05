@@ -1,5 +1,9 @@
 # Public speaking
 
+### (PL) [ATM2017](https://allegro.tech/meeting/): Offline nie gryzie (2016-09-07)
+
+- [video](https://www.youtube.com/watch?v=apIOap6DsCA)
+
 ### (EN) [Big Data Tech Summit Warsaw 2017](http://bigdatatechwarsaw.eu/): One Jupyter to rule them all! (2017-02-09)
 
 - [slides](https://www.slideshare.net/MariuszStrzelecki/one-jupyter-to-rule-them-all)
