@@ -31,3 +31,4 @@
 
 - [slides](https://gitpitch.com/szczeles/public-speaking/torunjug2017)
 - [source](https://github.com/szczeles/public-speaking/tree/torunjug2017)
+- [video](https://www.youtube.com/watch?v=7Xjy2ewPJFA)
