@@ -22,6 +22,10 @@ Mariusz Strzelecki
 
 ---
 
+![stack](https://spark.apache.org/images/spark-stack.png)
+
+---
+
 # Środowisko
 
 - Spark (scala/python)
