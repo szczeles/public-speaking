@@ -8,7 +8,11 @@ Mariusz Strzelecki
 
 # Rekomendacje dla wyszukiwarki
 
+---
+
 ![literowka](images/literowka.png)
+
+---
 
 ![podobne](images/podobne.png)
 
