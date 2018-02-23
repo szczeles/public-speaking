@@ -52,3 +52,41 @@ $ s3cmd ls s3://torun-jug-spark/aol-search-logs/ | cut -d' ' -f3-
 ```
 
 ---
+
+# Założenia
+
+1. Użytkownik wie, czego szuka
+  - nie wpisuje liter na oślep
+  - odrzucamy boty
+2. Jeśli użytkownik szuka czegoś wiele razy - traktujemy jako jedno wyszukanie (distinct)
+3. Stosujemy [Association rule learning](https://en.wikipedia.org/wiki/Association_rule_learning), jak sugerują [brazylijscy naukowcy](http://homepages.dcc.ufmg.br/~nivio/papers/laweb03-2.ps)
+
+---
+
+# Definicje: Support
+
+![support](https://wikimedia.org/api/rest_v1/media/math/render/svg/1c6acacd3b17051205704b5d323c83fc737e5db1)
+
+Dla nas: ilość użytkowników, którzy wpisali frazę _t_
+
+---
+
+# Definicje: Confidence
+
+![confidence](https://wikimedia.org/api/rest_v1/media/math/render/svg/90324dedc399441696116eed3658fd17c5da4329)
+
+Dla nas: ilość uzytkowników, którzy wpisywali frazę _x_ i _y_ dzielone przez liczbę tych, którzy wpisali tylko _x_.
+
+---
+
+# Czego szukamy?
+
+Dla frazy _x_ zaproponujemy inne o minimalnym _supporcie_ == 3 i najwyższym _confidence_
+
+![co_robimy](images/co_robimy.png)
+
+---
+
+# Do dzieła!
+
+### https://community.cloud.databricks.com/
