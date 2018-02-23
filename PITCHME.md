@@ -67,7 +67,7 @@ $ s3cmd ls s3://torun-jug-spark/aol-search-logs/ | cut -d' ' -f3-
 
 ![support](https://wikimedia.org/api/rest_v1/media/math/render/svg/1c6acacd3b17051205704b5d323c83fc737e5db1)
 
-Dla nas: ilość użytkowników, którzy wpisali frazę _t_
+Dla nas: ilość użytkowników, którzy wpisali frazę _x_
 
 ---
 
