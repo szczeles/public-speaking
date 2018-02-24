@@ -79,7 +79,7 @@ Dla nas: ilość użytkowników, którzy wpisali frazę _x_
 
 ![confidence](https://wikimedia.org/api/rest_v1/media/math/render/svg/90324dedc399441696116eed3658fd17c5da4329)
 
-Dla nas: ilość uzytkowników, którzy wpisywali frazę _x_ i _y_ dzielone przez liczbę tych, którzy wpisali tylko _x_.
+Dla nas: ilość użytkowników, którzy wpisywali frazy _x_ i _y_ dzielone przez liczbę tych, którzy wpisali tylko _x_.
 
 ---
 
@@ -94,3 +94,10 @@ Dla frazy _x_ zaproponujemy inne o minimalnym _supporcie_ == 3 i najwyższym _co
 # Do dzieła!
 
 #### https://community.cloud.databricks.com/
+
+
+--- 
+
+# Wyniki
+
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3372287593437537/3739853714728449/59641009141591/latest.html
