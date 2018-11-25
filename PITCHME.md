@@ -230,12 +230,15 @@ I thought that since Kafka was a system optimized for writing using a writer's n
 
 - doesn't cache data |
 - doesn't maintain cluster configuration |
-- implements local requests queue |
-- performs data compactation |
+- deletes *or compacts* old segments |
+- is easy to monitor and maintain |
 
 Note:
 * zero-copy!!
 * integrates well with Big Data systems like Hadoop and Spark
+* large variety of metrics exposed via JMX
+* supports multiple storage and protocol versions sumultianiusly
+* implements local requests queue |
 
 ---
 
@@ -262,6 +265,9 @@ Note:
 
 ## At-most-once
 
+Note:
+telemetry
+
 ---?image=assets/images/atmostonce01.png&size=contain
 
 ---?image=assets/images/atmostonce02.png&size=contain
@@ -269,6 +275,9 @@ Note:
 ---
 
 ## Exactly-once
+
+Note:
+since 0.11
 
 ---?image=assets/images/exactlyonce01.png&size=contain
 
@@ -278,10 +287,22 @@ Note:
 
 ## Security features
 
-- data "at rest" are stored plain |
-- TLS for brokers authentication |
-- TLS or Kerberos (SASL) for producers/consumers authentication |
+- data "at rest" are stored in plain bytes (see also KIP-317) |
+- TLS for brokers authentication in clients |
+- TLS or Kerberos (SASL) for producers/consumers authentication in brokers |
 - ACL-based authorization (for topics and consumer groups) |
+
+---
+
+## The Kafka Core Is Not Enough
+
+- Schema Registry |
+- Kafka Connect |
+- Kafka Streams, KSQL |
+- REST Proxy |
+
+Note:
+You can't miss tomorrow's session by Robin Moffatt
 
 ---
 
@@ -290,7 +311,7 @@ Note:
 - no support for retries on consuming side |
 - message filtering capabilities are missing |
 - "pull" mode for consumers only |
-- shouldn't share VM across other services |
+- shouldn't share VM with other applications |
 - no UI in the standard package |
 - not the most lightweight protocol for IoT |
 
