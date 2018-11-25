@@ -8,9 +8,9 @@
 
 --- 
 
+@snap[west]
 ## About me
 
-@snap[west]
 Mariusz Strzelecki
 
 Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="20%" />
