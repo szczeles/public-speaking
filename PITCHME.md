@@ -1,12 +1,14 @@
 ---?image=http://coredump.events/img/heroBG.jpg&size=cover
 
-# What Apache Kafka is not?
+# @color[white](What Apache Kafka is not?)
 
-<img src="http://coredump.events/img/heroBG.jpg" width="20%" />
+<img src="http://coredump.events/img/coreDump-White-Full.png" width="20%" />
 
 ---?image=http://ocdn.eu/pulscms-transforms/1/AO9ktkpTURBXy8yNzc1OWY4MGEwNzU1ODUwMGUzMjBkNmZhYWYzZGFkOS5qcGeSlQLNA8AAwsOVAgDNA8DCww&size=cover
 
---- About me
+--- 
+
+## About me
 
 Mariusz Strzelecki
 
@@ -59,7 +61,6 @@ reagowanie na zmiany cen akcji
 ```java
 @RestController
 public class EasyMessageBroker {
-
   private final Database db;
 
   @PostMapping
@@ -219,14 +220,14 @@ skalowalność, bezpieczeństwo danych, niezawodność, wysoka wydajność
 
 ## How to start?
 
-Docker: `wurstmeister/kafka-docker`
+Docker: @fa[github] wurstmeister/kafka-docker
 
-Kubernetes: `confluentinc/cp-helm-charts`
+Kubernetes: @fa[github] confluentinc/cp-helm-charts
 
 Non-virtualized: [confluent.io/download](confluent.io/download)
 
 ---
 
-# Thank you!
+# Thank you
 
-## Any questions?
+## Questions time!
