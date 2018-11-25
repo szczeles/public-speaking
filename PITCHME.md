@@ -2,7 +2,7 @@
 
 # @color[white](What Apache Kafka is not?)
 
-<img src="http://coredump.events/img/coreDump-White-Full.png" width="20%" />
+<img src="http://coredump.events/img/coreDump-White-Full.png" width="40%" />
 
 ---?image=http://ocdn.eu/pulscms-transforms/1/AO9ktkpTURBXy8yNzc1OWY4MGEwNzU1ODUwMGUzMjBkNmZhYWYzZGFkOS5qcGeSlQLNA8AAwsOVAgDNA8DCww&size=cover
 
@@ -10,11 +10,17 @@
 
 ## About me
 
+@snap[west]
 Mariusz Strzelecki
 
 Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="20%" />
 
 Working with distributed systems (including Kafka) for 4 years
+@snapend
+
+@snap[east]
+![](assets/img/fotka.jpg)
+@snapend
 
 --- 
 
