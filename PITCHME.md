@@ -240,4 +240,5 @@ Non-virtualized: [confluent.io/download](confluent.io/download)
 ## Questions time!
 
 <br/><br />
-@size[0.75em](We're hiring: [fandom.wikia.com/careers](fandom.wikia.com/careers)) <img src="https://vignette.wikia.nocookie.net/undertale-au/images/9/9a/FANDOM_Logo.png/revision/latest/scale-to-width-down/100" />
+<img src="https://vignette.wikia.nocookie.net/undertale-au/images/9/9a/FANDOM_Logo.png/revision/latest/scale-to-width-down/100" width="5%" />
+@size[0.75em](We're hiring: [fandom.wikia.com/careers](fandom.wikia.com/careers)) 
