@@ -105,6 +105,9 @@ Note:
 
 ---?image=assets/images/impl01.png&size=contain
 
+Note:
+* stateless
+
 ---?image=assets/images/impl02.png&size=contain
 
 ---
@@ -180,6 +183,12 @@ challenge - brokers coordination, metadata exchange
 
 ---?image=assets/images/impl08.png&size=contain
 
+Note:
+CAP
+* resilient to network partitioning,
+* consistent if used in synchronous mode
+* available on reads (if consistency is not required) 
+
 ---?image=assets/images/impl09.png&size=contain
 
 ---
@@ -246,7 +255,7 @@ Note:
 * integrates well with Big Data systems like Hadoop and Spark
 * large variety of metrics exposed via JMX
 * supports multiple storage and protocol versions sumultianiusly
-* implements local requests queue |
+* implements local requests queue
 
 ---
 
@@ -319,7 +328,7 @@ You can't miss tomorrow's session by Robin Moffatt
 - no support for retries on consuming side |
 - message filtering capabilities are missing |
 - "pull" mode for consumers only |
-- shouldn't share VM with other applications |
+- you shouldn't share VM with other applications |
 - no UI in the standard package |
 - not the most lightweight protocol for IoT |
 
