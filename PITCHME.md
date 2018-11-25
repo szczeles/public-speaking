@@ -97,6 +97,12 @@ IoT:
 - reliable, durable
 - easy API
 
+Note:
+* don't rely on one server
+* no bottleneck
+* no data loss if consumer is not listening for a while
+* straightforward API for IoT devices, a few MB of memory
+
 ---?image=assets/images/impl01.png&size=contain
 
 ---?image=assets/images/impl02.png&size=contain
@@ -123,7 +129,9 @@ public class EasyMessageBroker {
 ```
 
 Note:
-not effective - CRUD
+* any database - sql/nosql
+* not effective - CRUD
+* different analogy
 
 ---?image=assets/images/impl03.png&size=contain
 
