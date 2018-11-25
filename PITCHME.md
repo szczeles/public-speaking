@@ -230,7 +230,7 @@ I thought that since Kafka was a system optimized for writing using a writer's n
 
 - doesn't cache data |
 - doesn't maintain cluster configuration |
-- deletes *or compacts* old segments |
+- can compact data |
 - is easy to monitor and maintain |
 
 Note:
