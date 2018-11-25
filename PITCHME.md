@@ -1,10 +1,18 @@
-# Czym nie jest Apache&nbsp;Kafka?
+---?image=http://coredump.events/img/heroBG.jpg&size=cover
 
-<img src="http://day.torun.jug.pl/wp-content/uploads/2017/03/jug5d_2.png" width="20%" />
+# What Apache Kafka is not?
+
+<img src="http://coredump.events/img/heroBG.jpg" width="20%" />
+
+---?image=http://ocdn.eu/pulscms-transforms/1/AO9ktkpTURBXy8yNzc1OWY4MGEwNzU1ODUwMGUzMjBkNmZhYWYzZGFkOS5qcGeSlQLNA8AAwsOVAgDNA8DCww&size=cover
+
+--- About me
 
 Mariusz Strzelecki
 
----?image=http://ocdn.eu/pulscms-transforms/1/AO9ktkpTURBXy8yNzc1OWY4MGEwNzU1ODUwMGUzMjBkNmZhYWYzZGFkOS5qcGeSlQLNA8AAwsOVAgDNA8DCww&size=cover
+Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="20%" />
+
+Working with distributed systems (including Kafka) for 4 years
 
 --- 
 
@@ -20,30 +28,53 @@ Mariusz Strzelecki
 
 ---
 
-# Przypadki użycia
+# Use cases
 
-- asynchroniczna komunikacja między mikrousługami |
-- informowanie o zmianach |
-- przesuwanie ciężkich zadań "w tło" |
+- asynchronous, event-driven microservices communication |
+- change notification/cache invalidation |
+- task queue |
 - Internet Of Things |
 
 Note:
 gry multiplayer
 reagowanie na zmiany cen akcji
 
----?image=http://ddarchitekci.pl/www/wp-content/uploads/blueprint-964629.jpg&size=cover
+---?image=assets/images/architect-254579_1920.jpg&size=cover
 
 ---
 
-# Założenia
+# Key features
 
-- szybko
-- bezpiecznie
-- proste API
+- distributed
+- fast
+- reliable
+- easy API
 
 ---?image=assets/images/impl01.png&size=contain
 
 ---?image=assets/images/impl02.png&size=contain
+
+---
+
+```java
+@RestController
+public class EasyMessageBroker {
+
+  private final Database db;
+
+  @PostMapping
+  public void addEvent(@RequestBody Event event) {
+    db.save(event);
+  }
+
+  @GetMapping
+  public Event getEvent() {
+    Event event = db.findOne();
+    db.delete(event);
+    return event;
+  }
+}
+```
 
 ---?image=assets/images/impl03.png&size=contain
 
@@ -55,11 +86,11 @@ reagowanie na zmiany cen akcji
 
 ---
 
-## Wysoka dostępność (HA)
+## What about High Availability?
 
-- producenci ✓
-- broker ☹
-- konsumenci ☹
+- producers ✓
+- brokers ☹
+- consumers ☹
 
 ---?image=assets/images/impl07.png&size=contain
 
@@ -69,11 +100,11 @@ reagowanie na zmiany cen akcji
 
 ---
 
-## Wysoka dostępność (HA)
+## What about High Availability?
 
-- producenci ✓
-- brokerzy ✓
-- konsumenci ☹
+- producers ✓
+- brokers ✓
+- consumers ☹
 
 ---?image=assets/images/impl10.png&size=contain
 
@@ -88,21 +119,21 @@ rozkładanie obciążenia
 
 ---
 
-## Wysoka dostępność (HA)
+## What about High Availability?
 
-- producenci ✓
-- brokerzy ✓
-- konsumenci ✓
+- producers ✓
+- brokers ✓
+- consumers ✓
 
 ---
 
-## Dyski nie są nieskończone...
+## Disk space is not infinite...
 
 ---?image=assets/images/impl14.png&size=contain
 
 ---
 
-## "Poproszę wiadomość nr 9283723"
+## "I'd like to start reading at offset 9881292"
 
 ---?image=assets/images/impl15.png&size=contain
 
@@ -112,23 +143,23 @@ rozkładanie obciążenia
 
 # Kafka
 
-- nie cachuje danych |
-- nie przechowuje konfiguracji |
-- obsługuje żądania "w swoim czasie" |
-- nie tylko usuwa, ale też kompaktuje dane |
+- doesn't cache data |
+- doesn't maintain cluster configuration |
+- implements local requests queue |
+- performs data compactation |
 
 ---
 
-## Gwarancje dostarczenia wiadomości
+## Message delivery guarantees
 
 ![hard problems](assets/images/hardproblems.png)
 
 ---
 
-## Kolejność wiadomości
+## Ordering
 
-- tylko w obrębie partycji |
-- lider vs. replika |
+- only within partition |
+- managed by a leader, replicated to followers |
 
 ---
 
@@ -156,45 +187,46 @@ rozkładanie obciążenia
 
 ---
 
-## Bezpieczeństwo
+## Security features
 
-- dane są przechowywane w sposób jawny |
-- TLS szyfruje ruch i uwierzytelnia brokerów |
-- TLS lub Kerberos (SASL) uwierzytelniają klientów |
-- autoryzacja dostępu (do topików i grup konsumentów) |
-
----
-
-## Wady
-
-- brak wsparcia dla ponowień po stronie konsumentów |
-- nie ma możliwości filtrowania wiadomości |
-- brak komunikacji push do konsumentów |
-- zalecane użycie dedykowanych maszyn |
+- data "at rest" are stored plain |
+- TLS for brokers authentication |
+- TLS or Kerberos (SASL) for producers/consumers authentication |
+- ACL-based authorization (for topics and consumer groups) |
 
 ---
 
-# Podsumowanie
+## Kafka's weak points
 
-## O Kafce słów kilka
+- no support for retries on consuming side |
+- message filtering capabilities are missing |
+- "pull" mode for consumers only |
+- shouldn't share VM across other services |
+- no UI in the standard package |
 
-- proste założenia → genialny efekt |
-- wysoka skalowalność |
-- pasuje do niemal każdego zastosowania |
+---
+
+## What amazed me in Kafka?
+
+- easy foundations → brilliant result |
+- perfect scalability |
+- works well for every possible event-driven design |
 
 Note:
 skalowalność, bezpieczeństwo danych, niezawodność, wysoka wydajność
 
 ---
 
-## Jak zacząć?
+## How to start?
 
-Docker: `spotify/kafka`
+Docker: `wurstmeister/kafka-docker`
 
-Klasycznie: [confluent.io/download](confluent.io/download)
+Kubernetes: `confluentinc/cp-helm-charts`
+
+Non-virtualized: [confluent.io/download](confluent.io/download)
 
 ---
 
-# Dzięki!
+# Thank you!
 
-## Pytania?
+## Any questions?
