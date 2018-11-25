@@ -214,10 +214,10 @@ rozkładanie obciążenia
 
 ---
 
-## What amazed me in Kafka?
+## Summary
 
 - easy foundations → brilliant result |
-- perfect scalability |
+- perfect scalability, high throughput |
 - works well for every possible event-driven design |
 
 Note:
