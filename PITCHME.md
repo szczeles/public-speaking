@@ -22,6 +22,8 @@ Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/b
 ![](assets/images/fotka.jpg)
 @snapend
 
+Note:
+33rd most visited site in the US
 --- 
 
 # Publish-subscribe
@@ -32,11 +34,26 @@ Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/b
 Source: "Kafka: The Definitive Guide"
 @snapend
 
+Note:
+example metrics:
+ * number of invalid login attempts
+ * mean time of request processing
+ * number of server errors
+
 ---?image=assets/images/story02.png&size=contain
 
 @snap[south-west template-note]
 Source: "Kafka: The Definitive Guide"
 @snapend
+
+Note:
+Use cases for metrics:
+troubleshooting
+dashboards
+alerting
+anomaly detection
+
+We have microservices - tightly coupled
 
 ---?image=assets/images/story03.png&size=contain
 
@@ -50,6 +67,9 @@ Source: "Kafka: The Definitive Guide"
 Source: "Kafka: The Definitive Guide"
 @snapend
 
+Note:
+asynchronous/event-driven envivonment
+
 ---
 
 # Use cases
@@ -60,8 +80,11 @@ Source: "Kafka: The Definitive Guide"
 - Internet Of Things |
 
 Note:
-gry multiplayer
-reagowanie na zmiany cen akcji
+* multiplayer games
+* listening to stock prices changes
+
+IoT:
+ * till 2020, 26 bilion devices communicating via Internet of other networks
 
 ---?image=assets/images/architect-254579_1920.jpg&size=cover
 
@@ -71,7 +94,7 @@ reagowanie na zmiany cen akcji
 
 - distributed
 - fast
-- reliable
+- reliable, durable
 - easy API
 
 ---?image=assets/images/impl01.png&size=contain
@@ -99,7 +122,28 @@ public class EasyMessageBroker {
 }
 ```
 
+Note:
+not effective - CRUD
+
 ---?image=assets/images/impl03.png&size=contain
+
+```java
+@RestController
+public class EasyMessageBroker {
+  private final File file;
+
+  @PostMapping
+  public void addEvent(@RequestBody Event event) {
+    file.append(event);
+  }
+
+  @GetMapping
+  public Event getEvent(int offset) {
+    long filePosition = offset * MSG_SIZE;
+    return Event.deserialize(file, filePosition);
+  }
+}
+```
 
 ---?image=assets/images/impl04.png&size=contain
 
@@ -107,15 +151,22 @@ public class EasyMessageBroker {
 
 ---?image=assets/images/impl06.png&size=contain
 
+Note:
+
+not usable on production
+
 ---
 
 ## What about High Availability?
 
-- producers ✓
-- brokers ☹
-- consumers ☹
+- producer ✓
+- broker ☹
+- consumer ☹
 
 ---?image=assets/images/impl07.png&size=contain
+
+Note:
+challenge - brokers coordination, metadata exchange
 
 ---?image=assets/images/impl08.png&size=contain
 
@@ -125,9 +176,9 @@ public class EasyMessageBroker {
 
 ## What about High Availability?
 
-- producers ✓
-- brokers ✓
-- consumers ☹
+- producer ✓
+- broker ✓
+- consumer ☹
 
 ---?image=assets/images/impl10.png&size=contain
 
@@ -144,15 +195,18 @@ rozkładanie obciążenia
 
 ## What about High Availability?
 
-- producers ✓
-- brokers ✓
-- consumers ✓
+- producer ✓
+- broker ✓
+- consumer ✓
 
 ---
 
 ## Disk space is not infinite...
 
 ---?image=assets/images/impl14.png&size=contain
+
+Note:
+similar to rollable logs from application servers
 
 ---
 
@@ -162,6 +216,12 @@ rozkładanie obciążenia
 
 ---?image=https://kafka.apache.org/images/logo.png&size=contain
 
+Note:
+
+Jay Kreps: 
+
+I thought that since Kafka was a system optimized for writing using a writer's name would make sense. I had taken a lot of lit classes in college and liked Franz Kafka. Plus the name sounded cool for an open source project. 
+
 ---
 
 # Kafka
@@ -170,6 +230,10 @@ rozkładanie obciążenia
 - doesn't maintain cluster configuration |
 - implements local requests queue |
 - performs data compactation |
+
+Note:
+* zero-copy!!
+* integrates well with Big Data systems like Hadoop and Spark
 
 ---
 
