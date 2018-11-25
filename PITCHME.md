@@ -241,4 +241,4 @@ Non-virtualized: [confluent.io/download](confluent.io/download)
 
 <br/><br />
 <img src="https://vignette.wikia.nocookie.net/undertale-au/images/9/9a/FANDOM_Logo.png/revision/latest/scale-to-width-down/100" width="5%" />
-@size[0.75em](We're hiring: [fandom.wikia.com/careers](fandom.wikia.com/careers)) 
+@size[0.75em](We're hiring! [fandom.wikia.com/careers](fandom.wikia.com/careers)) 
