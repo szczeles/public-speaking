@@ -13,7 +13,7 @@
 
 Mariusz Strzelecki<br/>
 
-Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="20%" /><br />
+Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="30%" /><br />
 
 4 years with Hadoop/Spark/Kafka
 @snapend
