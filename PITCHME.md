@@ -10,7 +10,7 @@
 
 @snap[west]
 ## About me
-
+G
 Mariusz Strzelecki<br/>
 
 Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="30%" /><br />
@@ -210,6 +210,7 @@ rozkładanie obciążenia
 - "pull" mode for consumers only |
 - shouldn't share VM across other services |
 - no UI in the standard package |
+- not the most lightweight protocol for IoT |
 
 ---
 
@@ -237,3 +238,5 @@ Non-virtualized: [confluent.io/download](confluent.io/download)
 # Thank you
 
 ## Questions time!
+
+We're hiring: [fandom.wikia.com/careers](fandom.wikia.com/careers) <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="30%" />
