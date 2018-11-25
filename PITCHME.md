@@ -127,9 +127,11 @@ not effective - CRUD
 
 ---?image=assets/images/impl03.png&size=contain
 
+---
+
 ```java
 @RestController
-public class EasyMessageBroker {
+public class FileBackedMessageBroker {
   private final File file;
 
   @PostMapping
@@ -140,7 +142,7 @@ public class EasyMessageBroker {
   @GetMapping
   public Event getEvent(int offset) {
     long filePosition = offset * MSG_SIZE;
-    return Event.deserialize(file, filePosition);
+    return Event.deserialize(file, filePosition, MSG_SIZE);
   }
 }
 ```
