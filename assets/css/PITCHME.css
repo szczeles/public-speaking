@@ -5,6 +5,11 @@
   background: none;
 }
 
+.template-note {
+  letter-spacing: 0.1em;
+  font-size: 0.4em !important;
+}
+
 h1 {
   text-transform: none !important;
 }
