@@ -34,9 +34,21 @@ Source: "Kafka: The Definitive Guide"
 
 ---?image=assets/images/story02.png&size=contain
 
+@snap[south-west template-note]
+Source: "Kafka: The Definitive Guide"
+@snapend
+
 ---?image=assets/images/story03.png&size=contain
 
+@snap[south-west template-note]
+Source: "Kafka: The Definitive Guide"
+@snapend
+
 ---?image=assets/images/story04.png&size=contain
+
+@snap[south-west template-note]
+Source: "Kafka: The Definitive Guide"
+@snapend
 
 ---
 
