@@ -11,11 +11,11 @@
 @snap[west]
 ## About me
 
-Mariusz Strzelecki
+Mariusz Strzelecki<br/>
 
-Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="20%" />
+Data engineer @ <img src="https://vignette.wikia.nocookie.net/central/images/b/bc/Fandom_logo.png/revision/latest?cb=20170519213035" width="20%" /><br />
 
-Working with distributed systems (including Kafka) for 4 years
+Working with Hadoop/Spark/Kafka for 4 years
 @snapend
 
 @snap[east]
