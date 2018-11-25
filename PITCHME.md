@@ -19,7 +19,7 @@ Working with distributed systems (including Kafka) for 4 years
 @snapend
 
 @snap[east]
-![](assets/imges/fotka.jpg)
+![](assets/images/fotka.jpg)
 @snapend
 
 --- 
