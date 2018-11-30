@@ -4,7 +4,7 @@
 
 <img src="http://coredump.events/img/coreDump-White-Full.png" width="40%" />
 
----?image=http://ocdn.eu/pulscms-transforms/1/AO9ktkpTURBXy8yNzc1OWY4MGEwNzU1ODUwMGUzMjBkNmZhYWYzZGFkOS5qcGeSlQLNA8AAwsOVAgDNA8DCww&size=cover
+---?image=assets/images/vabanque.jpg&size=cover
 
 --- 
 
