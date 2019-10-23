@@ -2,6 +2,10 @@
 
 ---
 
+![Video](https://player.vimeo.com/video/368358191)
+
+---
+
 ## Add Some Slide Candy
 
 ![IMAGE](assets/img/presentation.png)
