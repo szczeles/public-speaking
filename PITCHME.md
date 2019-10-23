@@ -4,11 +4,18 @@
 
 ![Video](https://player.vimeo.com/video/368358191)
 
+---?image=assets/img/engineer1.png
+
+---?image=assets/img/engineer2.jpg
+
+---?image=assets/img/engineer3.png
+
 ---
+
+![IMAGE](assets/img/presentation.png)
 
 ## Add Some Slide Candy
 
-![IMAGE](assets/img/presentation.png)
 
 ---?color=linear-gradient(180deg, white 75%, black 25%)
 @title[Customize Slide Layout]
