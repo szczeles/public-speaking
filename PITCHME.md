@@ -1,4 +1,4 @@
-# Let's Get Started
+# Kafka Connect - szwajcarski scyzoryk w rękach inżyniera
 
 ---
 
