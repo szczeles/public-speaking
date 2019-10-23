@@ -4,11 +4,11 @@
 
 ![Video](https://player.vimeo.com/video/368358191)
 
----?image=assets/img/engineer1.png
+---?image=assets/img/engineer1.png&size=cover
 
----?image=assets/img/engineer2.jpg
+---?image=assets/img/engineer2.jpg&size=cover
 
----?image=assets/img/engineer3.png
+---?image=assets/img/engineer3.png&size=cover
 
 ---
 
