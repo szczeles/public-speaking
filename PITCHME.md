@@ -1,4 +1,4 @@
-### Kafka Connect - szwajcarski scyzoryk w rękach inżyniera
+## Kafka Connect - szwajcarski scyzoryk w rękach inżyniera
 
 ---
 
