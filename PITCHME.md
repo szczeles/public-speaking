@@ -14,7 +14,9 @@
 
 ## Kafka
 
-![IMAGE](https://szczeles.github.io/images/sample.svg)
+---
+
+![IMAGE](https://szczeles.github.io/images/Kafka.svg)
 
 ---
 
