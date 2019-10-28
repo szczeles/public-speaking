@@ -51,7 +51,9 @@
 @ul
 - rozszerzanie przez wtyczki (dostarczane jako JARy)
 - bestanowość
+- wysoka dostępność (HA)
 - gwarancje dostarczenia zależne od implementacji
+- proste mapowania dostpne dzięki Simple Message Transformations
 @ulend
 
 ---?color=#5289F7
@@ -162,6 +164,21 @@ CQRS: wyszukiwarka użytkowników
 +++
 
 ## Linii kodu: 0
+
+---?color=#5289F7
+
+@snap[text-white text-20]
+@fa[tools] #3
+@snapend
+
+@snap[south text-white text-15 span-100]
+Nie tylko bazy danych
+@snapend
+
++++
+
+## TODO
+
 
 ---
 
