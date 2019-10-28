@@ -115,6 +115,22 @@ class UserRepository {
 
 ---
 
+## A co z NoSQL?
+
+---
+
+![IMAGE](https://szczeles.github.io/images/NoSQL.svg)
+
+---
+
+## Linii kodu: `0`
+
+---
+
+# CQRS
+
+---
+
 # Dzięki!
 
 ## Pytania?
