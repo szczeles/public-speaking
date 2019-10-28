@@ -127,7 +127,7 @@ class UserRepository {
 
 ---?color=#5289F7
 
-# CQRS
+@css[text-white](# CQRS)
 
 ---?color=#5289F7
 
