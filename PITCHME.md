@@ -12,39 +12,39 @@
 
 ---?image=https://kafka.apache.org/images/logo.png&size=contain
 
----
++++
 
 ## Kafka
 
 ![IMAGE](https://szczeles.github.io/images/Kafka.svg)
 
----
++++
 
 ## + Schema Registry
 
 ![IMAGE](https://szczeles.github.io/images/Kafka_SR.svg)
 
----
++++
 
 ## + Kafka Streams API
 
 ![IMAGE](https://szczeles.github.io/images/Kafka_SR_Streams.svg)
 
----
++++
 
 ## + REST Proxy
 
 ![IMAGE](https://szczeles.github.io/images/Kafka_SR_Streams_Rest.svg)
 
----
++++
 
 # Kafka Connect
 
----
++++
 
 ![IMAGE](https://szczeles.github.io/images/Kafka_Connect.svg)
 
----
++++
 
 ## Kafka Connect
 
@@ -56,9 +56,16 @@
 
 ---?color=#5289F7
 
-## Architekt wraca z konferencji...
+@snap[north text-white text-20]
+Wyzwanie #1
+@snapend
 
-## "Migrujemy na Postgresa 12"
+
+@snap[south text-white text-15]
+Architekt wraca z konferencji:
+
+_Migrujemy na Postgresa 12_
+@snapend
 
 ---
 
