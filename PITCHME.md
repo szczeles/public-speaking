@@ -48,9 +48,11 @@
 
 ## Kafka Connect
 
-* rozszerzanie przez wtyczki (dostarczane jako JARy)
-* bestanowość
-* gwarancje dostarczenia zależne od implementacji
+@ul
+- rozszerzanie przez wtyczki (dostarczane jako JARy)
+- bestanowość
+- gwarancje dostarczenia zależne od implementacji
+@ulend
 
 ---
 
@@ -83,15 +85,25 @@ class UserRepository {
 
     public void save(User user) {
         this.mysql.persist(user);
-	this.postgres.persist(user);
+        this.postgres.persist(user);
     }
 }
 ```
 @snap[south span-100 text-gray text-08]
-@[3](Wsparcie dla Postgresa w aplikacji)
-@[9](Wywołanie zapisu w nowej bazie)
+@[3]
+@[9]
+@[1-11]
 @snapend
 
+---
+
+## Wyglada OK, ale...
+
+@ul
+- jak przenieść aktualny stan bazy?
+- co jeśli Postgres jest niedostępny?
+- co z RODO?
+@ulend
 
 ---
 
