@@ -60,8 +60,7 @@
 Historia #1
 @snapend
 
-
-@snap[south text-white text-15 span-50]
+@snap[south text-white text-15 span-100]
 Architekt wraca z konferencji:
 
 _Migrujemy na Postgresa 12_
