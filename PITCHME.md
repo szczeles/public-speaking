@@ -66,7 +66,7 @@ Architekt wraca z konferencji:
 _Migrujemy na Postgresa 12_
 @snapend
 
----
++++
 
 ```java
 class UserRepository {
@@ -80,7 +80,7 @@ class UserRepository {
 }
 ```
 
----
++++
 
 ```java
 class UserRepository {
@@ -101,7 +101,7 @@ class UserRepository {
 @[1-11]
 @snapend
 
----
++++
 
 ## Wyglada OK, ale...
 
@@ -111,31 +111,59 @@ class UserRepository {
 - co z RODO?
 @ulend
 
----
++++
 
 ![IMAGE](https://szczeles.github.io/images/App_Sync.svg)
 
----
++++
 
 ![IMAGE](https://szczeles.github.io/images/App_Sync_Kafka.svg)
 
----
++++
 
 ## A co z NoSQL?
 
----
++++
 
 ![IMAGE](https://szczeles.github.io/images/NoSQL.svg)
 
----
++++
 
 ## Linii kodu: 0
 
 ---?color=#5289F7
 
-@css[text-white text-25](CQRS)
+@snap[text-white text-20]
+@fa[tools] #2
+@snapend
 
----?color=#5289F7
+@snap[south text-white text-15 span-100]
+CQRS: wyszukiwarka użytkowników
+@snapend
+
++++
+
+## CQRS
+
+* osobny model do zapisu i do odczytu
+* synchronizacja modeli
+* zachowanie spójności?
+* mutacje schematów danych?
+
++++
+
+![IMAGE](https://szczeles.github.io/images/ES.svg)
+
+
++++
+
+![IMAGE](https://szczeles.github.io/images/ES_S3.svg)
+
++++
+
+## Linii kodu: 0
+
+---
 
 # Dzięki!
 
