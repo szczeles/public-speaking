@@ -57,7 +57,7 @@
 ---?color=#5289F7
 
 @snap[text-white text-20]
-Historia #1
+@fa[tools] #1
 @snapend
 
 @snap[south text-white text-15 span-100]
