@@ -14,9 +14,25 @@
 
 ## Kafka
 
+![IMAGE](https://szczeles.github.io/images/Kafka.svg)
+
 ---
 
-![IMAGE](https://szczeles.github.io/images/Kafka.svg)
+## + Schema Registry
+
+![IMAGE](https://szczeles.github.io/images/Kafka_SR.svg)
+
+---
+
+## + Kafka Streams API
+
+![IMAGE](https://szczeles.github.io/images/Kafka_SR_Streams.svg)
+
+---
+
+## + REST Proxy
+
+![IMAGE](https://szczeles.github.io/images/Kafka_SR_Streams_Rest.svg)
 
 ---
 
