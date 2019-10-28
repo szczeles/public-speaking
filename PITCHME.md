@@ -12,7 +12,11 @@
 
 ---
 
-![IMAGE](assets/img/presentation.png)
+## Kafka
+
+![IMAGE](https://szczeles.github.io/images/sample.svg)
+
+---
 
 ## Add Some Slide Candy
 
