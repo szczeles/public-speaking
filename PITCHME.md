@@ -54,7 +54,7 @@
 - gwarancje dostarczenia zależne od implementacji
 @ulend
 
----
+---?color=#5289F7
 
 ## Architekt wraca z konferencji...
 
@@ -123,13 +123,13 @@ class UserRepository {
 
 ---
 
-## Linii kodu: `0`
+## Linii kodu: 0
 
----
+---?color=#5289F7
 
 # CQRS
 
----
+---?color=#5289F7
 
 # Dzięki!
 
