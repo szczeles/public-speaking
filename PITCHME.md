@@ -57,11 +57,11 @@
 ---?color=#5289F7
 
 @snap[text-white text-20]
-Demo **#1**
+Historia #1
 @snapend
 
 
-@snap[south text-white text-15 snap-50]
+@snap[south text-white text-15 span-50]
 Architekt wraca z konferencji:
 
 _Migrujemy na Postgresa 12_
