@@ -56,9 +56,9 @@
 
 ---
 
-## Architekt wrócił z konferencji, więc...
+## Architekt wraca z konferencji...
 
-# "Migrujemy na Postgresa 12"
+## "Migrujemy na Postgresa 12"
 
 ---
 
@@ -104,6 +104,14 @@ class UserRepository {
 - co jeśli Postgres jest niedostępny?
 - co z RODO?
 @ulend
+
+---
+
+![IMAGE](https://szczeles.github.io/images/App_Sync.svg)
+
+---
+
+![IMAGE](https://szczeles.github.io/images/App_Sync_Kafka.svg)
 
 ---
 
