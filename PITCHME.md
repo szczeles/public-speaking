@@ -189,11 +189,19 @@ Więcej niż _przerzucanie danych_
 
 ![IMAGE](https://szczeles.github.io/images/KSQL_Connect-Page-1.svg)
 
++++
+
+## Linii kodu: 2
+
 ---?color=#5289F7
 
 @snap[text-white text-20]
 Podsumowanie
 @snapend
+
++++
+
+![IMAGE](https://szczeles.github.io/images/Summary.svg)
 
 +++
 
@@ -227,6 +235,8 @@ Podsumowanie
 - trzeba zaprzyjaźnić się z Kafką i AVRO
 - system klasy 80%/20%
 @ulend
+
++++?image=https://assets.victorinox.com/mediahub/33790/560Wx490H/SAK_1_4713__S1.jpg&size=contain
 
 +++
 
