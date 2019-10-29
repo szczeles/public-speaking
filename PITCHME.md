@@ -147,10 +147,12 @@ CQRS: wyszukiwarka użytkowników
 
 ## CQRS
 
+@ul
 * osobny model do zapisu i do odczytu
 * synchronizacja modeli
 * zachowanie spójności?
 * mutacje schematów danych?
+@ulend
 
 +++
 
