@@ -181,13 +181,13 @@ Więcej niż _przerzucanie danych_
 
 ## KSQL
 
-![IMAGE](https://szczeles.github.io/images/KSQL.svg)
+![IMAGE](https://szczeles.github.io/images/KSQL-Page-2.svg)
 
 +++
 
 ## KSQL + Connect
 
-![IMAGE](https://szczeles.github.io/images/KSQL_Connect.svg)
+![IMAGE](https://szczeles.github.io/images/KSQL_Connect-Page-1.svg)
 
 ---
 
