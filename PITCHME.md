@@ -189,7 +189,46 @@ Więcej niż _przerzucanie danych_
 
 ![IMAGE](https://szczeles.github.io/images/KSQL_Connect-Page-1.svg)
 
----
+---?color=#5289F7
+
+@snap[text-white text-20]
+Podsumowanie
+@snapend
+
++++
+
+## Konektory
+
+@ul
+- Systemy kolejkowe: ActiveMQ, JMS, MQTT, Rabbit, Kinesis
+- Bazy danych: MySQL, PostgreSQL, MongoDB, SQL Server, Cassandra, Redis, Elasticsearch
+- Systemy plików: HDFS, S3, Azure Blob, GCP Big Query
+- Inne: REST, Websockets, AWS Lambda, Splunk, Twitter, RSS
+- Ciekawostki: Blockchain, Bloomberg
+@ulend
+
++++
+
+## Mocne strony
+
+@ul
+- mnóstwo konektorów
+- bardzo niski próg wejścia
+- wysoka dostępność od ręki
+- łatwe wdrażanie na Kubernetes
+@ulend
+
++++
+
+## Słabe strony
+
+@ul
+- brak standardu na monitoring
+- trzeba zaprzyjaźnić się z Kafką i AVRO
+- system klasy 80%/20%
+@ulend
+
++++
 
 # Dzięki!
 
