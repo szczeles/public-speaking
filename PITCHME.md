@@ -174,13 +174,20 @@ CQRS: wyszukiwarka użytkowników
 @snapend
 
 @snap[south text-white text-15 span-100]
-Nie tylko bazy danych
+Więcej niż _przerzucanie danych_
 @snapend
 
 +++
 
-## TODO
+## KSQL
 
+![IMAGE](https://szczeles.github.io/images/KSQL.svg)
+
++++
+
+## KSQL + Connect
+
+![IMAGE](https://szczeles.github.io/images/KSQL_Connect.svg)
 
 ---
 
