@@ -53,7 +53,7 @@
 - bestanowość
 - wysoka dostępność (HA)
 - gwarancje dostarczenia zależne od implementacji
-- proste mapowania dostpne dzięki Simple Message Transformations
+- proste mapowania dostpne dzięki Single Message Transformations
 @ulend
 
 ---?color=#5289F7
