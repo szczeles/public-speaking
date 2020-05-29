@@ -38,4 +38,4 @@
 - [slides](https://gitpitch.com/szczeles/public-speaking/kafkaconnect)
 - [source](https://github.com/szczeles/public-speaking/tree/kafkaconnect)
 - [code](https://github.com/szczeles/kafkaconnect-demo)
-- [video](...)
+- [video](https://www.youtube.com/watch?v=iiz6t8g5t6Q)
