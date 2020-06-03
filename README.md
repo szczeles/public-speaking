@@ -31,7 +31,7 @@
 
 - [slides](https://gitpitch.com/szczeles/public-speaking/torunjug2017)
 - [source](https://github.com/szczeles/public-speaking/tree/torunjug2017)
-- [video](https://www.youtube.com/watch?v=7Xjy2ewPJFA)
+- [video](https://www.youtube.com/watch?v=7Xjy2ewPJFA) / [video EN](https://www.youtube.com/watch?v=kXLsnbRvhiM)
 
 ### (PL) [Toruń JUG](https://www.meetup.com/Torun-JUG/): Kafka Connect - szwajcarski scyzoryk w rękach inżyniera (2019-10-30)
 
