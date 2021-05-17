@@ -39,3 +39,7 @@
 - [source](https://github.com/szczeles/public-speaking/tree/kafkaconnect)
 - [code](https://github.com/szczeles/kafkaconnect-demo)
 - [video](https://www.youtube.com/watch?v=iiz6t8g5t6Q)
+
+### (EN) [BigData Technology Warsaw Summit 2021](https://bigdatatechwarsaw.eu/agenda/): Welcome to MLOps candy shop and choose your flavour! (2021-02-25)
+
+- [slides](https://docs.google.com/presentation/d/1NqdtO7zAvesd5i5bWkwp7NE92czx5D0lMuzF0fOkosQ/edit?usp=sharing)
