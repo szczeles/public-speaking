@@ -43,3 +43,7 @@
 ### (EN) [BigData Technology Warsaw Summit 2021](https://bigdatatechwarsaw.eu/agenda/): Welcome to MLOps candy shop and choose your flavour! (2021-02-25)
 
 - [slides](https://docs.google.com/presentation/d/1NqdtO7zAvesd5i5bWkwp7NE92czx5D0lMuzF0fOkosQ/edit?usp=sharing)
+
+### (EN) [Data Science Summit ML Edition](https://ml.dssconf.pl/): Model serving made easy using Kedro pipelines
+
+- [slides](https://docs.google.com/presentation/d/1w4-1yPZoYJuX_nm42dJDeGmqdGTr_Jfs4cUiyU3Drbs/edit?usp=sharing)
