@@ -44,6 +44,11 @@
 
 - [slides](https://docs.google.com/presentation/d/1NqdtO7zAvesd5i5bWkwp7NE92czx5D0lMuzF0fOkosQ/edit?usp=sharing)
 
-### (EN) [Data Science Summit ML Edition](https://ml.dssconf.pl/): Model serving made easy using Kedro pipelines
+### (EN) [Amundsen Community Meeting](https://www.amundsen.io/amundsen/#community-meetings): Feast + Amundsen Integration (2021-04-01)
+
+- [slides](https://docs.google.com/presentation/d/1bN8pkb29AdePh8GYQHRHeyE51ErhiS3xoQRuSqaBYRU/edit?usp=sharing)
+- [video](https://youtu.be/IE4T8OBvhEs?t=755)
+
+### (EN) [Data Science Summit ML Edition](https://ml.dssconf.pl/): Model serving made easy using Kedro pipelines (2021-06-18)
 
 - [slides](https://docs.google.com/presentation/d/1w4-1yPZoYJuX_nm42dJDeGmqdGTr_Jfs4cUiyU3Drbs/edit?usp=sharing)
