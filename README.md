@@ -43,6 +43,7 @@
 ### (EN) [BigData Technology Warsaw Summit 2021](https://bigdatatechwarsaw.eu/agenda/): Welcome to MLOps candy shop and choose your flavour! (2021-02-25)
 
 - [slides](https://docs.google.com/presentation/d/1NqdtO7zAvesd5i5bWkwp7NE92czx5D0lMuzF0fOkosQ/edit?usp=sharing)
+- [video](https://www.youtube.com/watch?v=gdinM_9R2GA)
 
 ### (EN) [Amundsen Community Meeting](https://www.amundsen.io/amundsen/#community-meetings): Feast + Amundsen Integration (2021-04-01)
 
