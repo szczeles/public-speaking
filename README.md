@@ -52,3 +52,8 @@
 ### (EN) [Data Science Summit ML Edition](https://ml.dssconf.pl/): Model serving made easy using Kedro pipelines (2021-06-18)
 
 - [slides](https://docs.google.com/presentation/d/1w4-1yPZoYJuX_nm42dJDeGmqdGTr_Jfs4cUiyU3Drbs/edit?usp=sharing)
+
+### (PL) [BDTW Webinars](https://bigdatatechwarsaw.eu/webinar-online/): (Almost) No-code ML predictions in real-time with ksqlDB and MLeap (2022-03-22)
+
+- [slides](https://docs.google.com/presentation/d/1v8SVC3auHZuw4Z_sPQBPr78nA_7lywRWlCezqSIOvsU/edit?usp=sharing)
+- [video](https://bigdatatechwarsaw.eu/webinar-online/)
