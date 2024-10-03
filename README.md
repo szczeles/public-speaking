@@ -59,3 +59,11 @@
 
 - [slides](https://docs.google.com/presentation/d/1v8SVC3auHZuw4Z_sPQBPr78nA_7lywRWlCezqSIOvsU/edit?usp=sharing)
 - [video](https://bigdatatechwarsaw.eu/webinar-online/)
+
+### (PL) [Toruń JUG](https://www.meetup.com/Torun-JUG/): Żonglerka danymi z Singer.io i Meltano (2023-10-25)
+- [slides](https://docs.google.com/presentation/d/1YaICdm_8cp2rTAkomHjvjN6Lwcajh-yKoNIrBuUq1VU/edit?usp=sharing)
+- [video](https://www.youtube.com/watch?v=FekYQxB__3M)
+
+### (PL) [Toruń JUG](https://www.meetup.com/Torun-JUG/): Inteligentny dom po taniości (2024-05-18)
+- [slides](https://docs.google.com/presentation/d/1vKchQfYPtfgp3dFB7J27cN2KDwfe4CGMU3l3xt9HTWE/edit?usp=sharing)
+- [video](https://www.youtube.com/watch?v=qhZJ4-cue1g)
